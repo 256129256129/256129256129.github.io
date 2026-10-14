@@ -2,11 +2,88 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Projekt WWW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoSort - Poradnik segregacji śmieci</title>
+    
+    <!-- 1) Informacja o autorze -->
+    <meta name="author" content="Twoje Imię i Nazwisko">
+    <!-- 2) Krótki opis treści dokumentu -->
+    <meta name="description" content="EkoSort to portal edukacyjny, który pomaga prawidłowo segregować odpady. Poznaj zasady recyklingu i punkty zbiórki.">
+    <!-- 3) Słowa kluczowe -->
+    <meta name="keywords" content="segregacja śmieci, recykling, odpady, ekologia, kosze na śmieci, pszok">
+    
+    <!-- Linkowanie pliku CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Strona działa!</h1>
-    <p>Projektowanie serwisów WWW</p>
-    <p>TEST ZAPISU</p>
+    <header>
+        <!-- 4) blok div z identyfikatorem class="content" -->
+        <div class="content">
+            <!-- 5) logo będące jednocześnie linkiem -->
+            <a href="index.html" class="logo">EkoSort ♻️</a>
+            <!-- 6) slogan opisujący zawartość w znaczniku p -->
+            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
+        </div>
+        
+        <!-- 7) przyciski nawigacji w strukturze grupującej ul -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="segregacja.html">Segregacja odpadów</a></li>
+                <li><a href="gdzie-wyrzucic.html">Gdzie wyrzucić?</a></li>
+                <li><a href="punkty.html">Punkty zbiórki</a></li>
+                <li><a href="poradnik.html">EkoPoradnik</a></li>
+                <li><a href="quiz.html">EkoQuiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. obrazek będący banerem -->
+        <div class="banner">
+            <!-- Miejsce na Twoje zdjęcie w przyszłości. Na razie szary prostokąt z tekstem alternatywnym -->
+            <img src="baner-placeholder.jpg" alt="Baner EkoSort - Kolorowe kosze na śmieci" style="width:100%; height:250px; background-color:#e0e0e0; object-fit:cover;">
+        </div>
+
+        <!-- 2. Pod banerem umieść dwa lub trzy bloki -->
+        <section class="content-blocks">
+            <!-- a. sekcja z opisem naszej działalności (O portalu) -->
+            <article>
+                <h2>O portalu EkoSort</h2>
+                <p>Jesteśmy portalem edukacyjnym, którego celem jest ułatwienie codziennej segregacji odpadów. Dowiesz się u nas, co oznaczają poszczególne kolory koszy i co dzieje się z Twoimi śmieciami po wyrzuceniu.</p>
+            </article>
+
+            <!-- b. sekcja z ofertą 1 -->
+            <article>
+                <h2>Zasady segregacji</h2>
+                <p>Poznaj szczegółowe wytyczne dla 5 głównych frakcji: papieru, szkła, metali i tworzyw sztucznych, bioodpadów oraz odpadów zmieszanych.</p>
+                <a href="segregacja.html" class="btn-more">więcej</a>
+            </article>
+
+            <!-- b. sekcja z ofertą 2 -->
+            <article>
+                <h2>Wyszukiwarka odpadów</h2>
+                <p>Masz problem z nietypowym odpadem? Sprawdź w naszej bazie, gdzie wyrzucić karton po mleku, potłuczoną szklankę czy starą baterię.</p>
+                <a href="gdzie-wyrzucic.html" class="btn-more">więcej</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 1. div z identyfikatorem class="content" z adresem w liście ul -->
+        <div class="content">
+            <h3>Kontakt</h3>
+            <ul>
+                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>E-mail: kontakt@ekosort.pl</li>
+            </ul>
+        </div>
+        
+        <!-- 2. Kolejny div z identyfikatorem class="copyright" -->
+        <div class="copyright">
+            <!-- Znak praw zastrzeżonych reprezentowany kodem -->
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
 </body>
 </html>
