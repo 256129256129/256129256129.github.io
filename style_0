@@ -1,0 +1,177 @@
+
+/* style.css - Podstawowe style dla witryny EkoSort */
+
+/* Podstawowe ustawienia strony */
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+
+    /* Stopka na dole strony */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nagłówek */
+header {
+    background-color: #2e7d32;
+    color: white;
+    flex-shrink: 0;
+}
+
+header .content {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.slogan {
+    margin: 5px 0 0 0;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Nawigacja */
+nav {
+    background-color: #1b5e20;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #4caf50;
+}
+
+/* Główna zawartość */
+main {
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 0 20px;
+
+    /* Wypełnia wolne miejsce i przesuwa stopkę w dół */
+    flex: 1;
+}
+
+.banner {
+    margin-bottom: 30px;
+}
+
+.banner img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Trzy sekcje obok siebie */
+.content-blocks {
+    display: flex;
+    gap: 20px;
+}
+
+.content-blocks article {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.content-blocks article h2 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+.btn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-more:hover {
+    background-color: #388e3c;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+footer .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer .content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .content ul li {
+    margin-bottom: 5px;
+}
+
+footer .copyright {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* Dostosowanie do telefonów */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-blocks {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+}
