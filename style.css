@@ -1,5 +1,9 @@
-
 /* style.css - Podstawowe style dla witryny EkoSort */
+
+/* Podstawowe ustawienia strony */
+html {
+    min-height: 100%;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -8,12 +12,18 @@ body {
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
+
+    /* Stopka na dole strony */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Nagłówek */
 header {
-    background-color: #2e7d32; /* Ekologiczna zieleń */
+    background-color: #2e7d32;
     color: white;
+    flex-shrink: 0;
 }
 
 header .content {
@@ -45,6 +55,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -61,15 +72,25 @@ nav ul li a:hover {
 /* Główna zawartość */
 main {
     max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
     margin: 20px auto;
     padding: 0 20px;
+
+    /* Wypełnia wolne miejsce i przesuwa stopkę w dół */
+    flex: 1;
 }
 
 .banner {
     margin-bottom: 30px;
 }
 
-/* Trzy sekcje obok siebie (wykorzystanie podstawowego flexboxa) */
+.banner img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Trzy sekcje obok siebie */
 .content-blocks {
     display: flex;
     gap: 20px;
@@ -80,7 +101,8 @@ main {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    flex: 1; /* Równy podział szerokości */
+    flex: 1;
+    min-width: 0;
 }
 
 .content-blocks article h2 {
@@ -106,13 +128,15 @@ main {
 footer {
     background-color: #333;
     color: white;
-    margin-top: 40px;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 footer .content {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 footer .content ul {
@@ -129,4 +153,24 @@ footer .copyright {
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
+}
+
+/* Dostosowanie do telefonów */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-blocks {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
 }
