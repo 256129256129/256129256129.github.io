@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punkty zbiórki (PSZOK) - EkoSort</title>
+    <meta name="author" content="Dominik Ciekański">
+    <meta name="description" content="Sprawdź adresy i godziny otwarcia Punktów Selektywnej Zbiórki Odpadów Komunalnych (PSZOK) w Łodzi.">
+    <meta name="keywords" content="PSZOK, punkty zbiórki, Łódź, gabaryty, elektrośmieci">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <a href="index.html" class="logo">EkoSort ♻️</a>
+            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
+        </div>
+    </header>
+
+    <button id="menu-toggle" aria-label="Otwórz menu">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="segregacja.html">Zasady segregacji</a></li>
+            <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
+            <li><a href="punkty.html" class="active-page">Punkty zbiórki</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="subpage-intro">
+            <h1><i class="bi bi-geo-alt"></i> Punkty Selektywnej Zbiórki Odpadów (PSZOK)</h1>
+            <p>Do punktów PSZOK mieszkańcy mogą bezpłatnie oddać odpady problemowe: stare meble (gabaryty), zużyty sprzęt RTV/AGD, opony, gruz poremontowy, farby oraz chemikalia.</p>
+        </div>
+
+        <div class="content-blocks">
+            <section class="kolumna">
+                <h2>PSZOK Łódź – Bałuty</h2>
+                <p><strong>Adres:</strong> ul. Kasprowicza 10, 91-212 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–18:00, Sob: 8:00–14:00</p>
+                <p><strong>Przyjmowane odpady:</strong> elektrośmieci, meble, opony, odpady zielone, gruz budowlany.</p>
+            </section>
+
+            <section class="kolumna">
+                <h2>PSZOK Łódź – Widzew</h2>
+                <p><strong>Adres:</strong> ul. Graniczna 2, 93-428 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–18:00, Sob: 8:00–14:00</p>
+                <p><strong>Przyjmowane odpady:</strong> zużyte baterie i akumulatory, świetlówki, tekstylia, chemikalia, gabaryty.</p>
+            </section>
+
+            <section class="kolumna">
+                <h2>PSZOK Łódź – Polesie</h2>
+                <p><strong>Adres:</strong> ul. Zamiejska 1, 94-112 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–18:00, Sob: 8:00–14:00</p>
+                <p><strong>Przyjmowane odpady:</strong> sprzęt RTV/AGD, stolarka okienna, ceramika łazienkowa, opony osobowe.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content footer-content">
+            <h3>Kontakt</h3>
+            <ul>
+                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>E-mail: kontakt@ekosort.pl</li>
+                <li>Telefon: +48 42 123 45 67</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone. Autor: Dominik Ciekański.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('#menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
