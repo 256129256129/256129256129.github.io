@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gdzie Wyrzucić? - EkoSort</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <a href="index.html" class="logo">EkoSort ♻️</a>
+            <p class="slogan">Szybki poradnik dla nietypowych odpadów.</p>
+        </div>
+    </header>
+
+    <button id="menu-toggle" aria-label="Otwórz menu">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="segregacja.html">Segregacja odpadów</a></li>
+            <li><a href="gdzie-wyrzucic.html" class="active-page">Gdzie wyrzucić?</a></li>
+            <li><a href="#punkty" onclick="alert('Sekcja w budowie!')">Punkty zbiórki</a></li>
+            <li><a href="#poradnik" onclick="alert('EkoPoradnik w przygotowaniu!')">EkoPoradnik</a></li>
+            <li><a href="#quiz" onclick="alert('EkoQuiz niebawem!')">EkoQuiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="subpage-intro">
+            <h1>Gdzie Wyrzucić?</h1>
+            <p>Często popełniamy błędy przy nietypowych przedmiotach. Zobacz, gdzie powinny trafić popularne kłopotliwe odpady:</p>
+        </div>
+
+        <div class="content-blocks">
+            <section class="kolumna spec-block">
+                <h2><i class="bi bi-phone"></i> Zużyty sprzęt i baterie</h2>
+                <p>Nigdy nie wyrzucaj ich do zwykłych koszy domowych! Elektronika, kable, baterie oraz świetlówki zawierają substancje niebezpieczne.</p>
+                <p><strong>Gdzie oddać:</strong> Specjalne pojemniki w sklepach i marketach, punkty zbiórki (PSZOK) lub mobilne zbiórki elektrośmieci.</p>
+            </section>
+
+            <section class="kolumna spec-block">
+                <h2><i class="bi bi-capsule"></i> Stare leki i termometry</h2>
+                <p>Leki przeterminowane lub niewykorzystane mogą skazić środowisko naturalne i wody gruntowe.</p>
+                <p><strong>Gdzie oddać:</strong> Specjalne oznakowane pojemniki w większości aptek oraz w PSZOK. Opakowania tekturowe i ulotki wyrzuć wcześniej do papieru.</p>
+            </section>
+
+            <section class="kolumna spec-block">
+                <h2><i class="bi bi-hammer"></i> Odpady gabarytowe i poremontowe</h2>
+                <p>Stare meble, materace, gruz, opony czy ceramika łazienkowa nie zmieszczą się w standardowych kontenerach.</p>
+                <p><strong>Gdzie oddać:</strong> PSZOK (Punkt Selektywnej Zbiórki Odpadów Komunalnych) w Twojej gminie lub wystaw w terminie odbioru odpadów wielkogabarytowych.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content footer-content">
+            <h3>Kontakt</h3>
+            <ul>
+                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li><i class="bi bi-envelope"></i> E-mail: kontakt@ekosort.pl</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('#menu-toggle');
+        const menu = document.querySelector('.menu');
+        hamburger.addEventListener('click', () => menu.classList.toggle('active'));
+    </script>
+</body>
+</html>
