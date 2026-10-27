@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zasady Segregacji - EkoSort</title>
+    <title>Zasady segregacji - EkoSort</title>
+    <meta name="author" content="Dominik Ciekański">
+    <meta name="description" content="Poznaj zasady segregacji odpadów na 5 frakcji: papier, plastik i metale, szkło, bio oraz zmieszane.">
+    <meta name="keywords" content="zasady segregacji, 5 frakcji, kolory koszy, recykling">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +14,7 @@
     <header>
         <div class="content">
             <a href="index.html" class="logo">EkoSort ♻️</a>
-            <p class="slogan">Poznaj zasady, które chronią naszą planetę.</p>
+            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
         </div>
     </header>
 
@@ -22,51 +25,49 @@
     <nav>
         <ul class="menu">
             <li><a href="index.html">Strona główna</a></li>
-            <li><a href="segregacja.html" class="active-page">Segregacja odpadów</a></li>
-            <li><a href="gdzie-wyrzucic.html">Gdzie wyrzucić?</a></li>
-            <li><a href="#punkty" onclick="alert('Sekcja w budowie!')">Punkty zbiórki</a></li>
-            <li><a href="#poradnik" onclick="alert('EkoPoradnik w przygotowaniu!')">EkoPoradnik</a></li>
-            <li><a href="#quiz" onclick="alert('EkoQuiz niebawem!')">EkoQuiz</a></li>
+            <li><a href="segregacja.html" class="active-page">Zasady segregacji</a></li>
+            <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
+            <li><a href="punkty.html">Punkty zbiórki</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="subpage-intro">
-            <h1>Zasady Segregacji Odpadów</h1>
-            <p>Prawidłowe dzielenie śmieci na frakcje pozwala na ich skuteczny recykling. Oto 5 podstawowych grup:</p>
+            <h1>Zasady segregacji odpadów (System 5 frakcji)</h1>
+            <p>W całej Polsce obowiązuje Jednolity System Segregacji Odpadów (JSSO). Poniżej znajdziesz dokładną ściągawkę, co wrzucać, a czego unikać w każdym z 5 pojemników.</p>
         </div>
 
         <div class="content-blocks">
-            <section class="kolumna color-block paper-bg">
-                <h2><i class="bi bi-journal-album"></i> PAPIER (Niebieski)</h2>
-                <p><strong>Wrzucamy:</strong> zeszyty, kartony, gazety, papier pakowy, torby papierowe.</p>
-                <p><strong>Nie wrzucamy:</strong> tłustego papieru, paragonów, ręczników papierowych, kartonów po mleku (Tetra Pak).</p>
+            <section class="kolumna bin-card bin-blue">
+                <h2><i class="bi bi-journal-text"></i> Papier (Niebieski)</h2>
+                <p><strong>WRZUCAMY:</strong> gazety, czasopisma, zeszyty, książki, kartony, tekturę falistą, torby i opakowania papierowe.</p>
+                <p><strong>NIE WRZUCAMY:</strong> ręczników papierowych, zużytych chusteczek, papieru zatłuszczonego, paragonów, kartonów po mleku i sokach.</p>
             </section>
 
-            <section class="kolumna color-block plastic-bg">
-                <h2><i class="bi bi-recycle"></i> PLASTIK I METALE (Żółty)</h2>
-                <p><strong>Wrzucamy:</strong> zgniecione butelki PET, puszki po napojach i konserwach, kapsle, kartony po sokach/mleku.</p>
-                <p><strong>Nie wrzucamy:</strong> zużytych baterii, opakowań po lekach, puszek po farbach, zabawek na baterie.</p>
+            <section class="kolumna bin-card bin-yellow">
+                <h2><i class="bi bi-cup-straw"></i> Metale i tworzywa (Żółty)</h2>
+                <p><strong>WRZUCAMY:</strong> zgniecione butelki PET, nakrętki, opakowania po jogurtach, reklamówki, puszki aluminiowe, фоlię, kartony wielomateriałowe (po mleku i sokach).</p>
+                <p><strong>NIE WRZUCAMY:</strong> butelek z zawartością, opakowań po lekach, zużytych baterii, sprzętu AGD, puszek po farbach i olejach.</p>
             </section>
 
-            <section class="kolumna color-block glass-bg">
-                <h2><i class="bi bi-cup-straw"></i> SZKŁO (Zielony)</h2>
-                <p><strong>Wrzucamy:</strong> puste butelki i słoiki po napojach i żywności, szklane opakowania po kosmetykach.</p>
-                <p><strong>Nie wrzucamy:</strong> ceramiki, fajansu, kryształów, szyb, żarówek, luster, zniczy.</p>
+            <section class="kolumna bin-card bin-green">
+                <h2><i class="bi bi-droplet"></i> Szkło (Zielony)</h2>
+                <p><strong>WRZUCAMY:</strong> butelki i słoiki po napojach i żywności (bez nakrętek), szklane opakowania po kosmetykach.</p>
+                <p><strong>NIE WRZUCAMY:</strong> ceramiki, doniczek, porcelany, szklanek, kieliszków, szkła żaroodpornego, żarówek, luster, szyb okiennych i zniczy z woskiem.</p>
             </section>
         </div>
 
-        <div class="content-blocks" style="margin-top: 20px;">
-            <section class="kolumna color-block bio-bg" style="flex: 2;">
-                <h2><i class="bi bi-trash3"></i> BIO (Brązowy)</h2>
-                <p><strong>Wrzucamy:</strong> odpadki warzywne i owocowe, gałęzie, skoszoną trawę, fusy po kawie/herbacie, skorupki jaj.</p>
-                <p><strong>Nie wrzucamy:</strong> kości i ości, mięsa, odchodów zwierząt, ziemi, oleju jadalnego.</p>
+        <div class="content-blocks">
+            <section class="kolumna bin-card bin-brown">
+                <h2><i class="bi bi-tree"></i> Bioodpady (Brązowy)</h2>
+                <p><strong>WRZUCAMY:</strong> odpadki warzywne i owocowe, obierki, fusy po kawie i herbacie, skorupki jaj, skoszoną trawę, liście, drobne gałęzie, zwiędłe kwiaty.</p>
+                <p><strong>NIE WRZUCAMY:</strong> resztek mięsa i kości, ości, oleju jadalnego, odchodów zwierzęcych, popiołu z węgla, płyt wiórowych.</p>
             </section>
 
-            <section class="kolumna color-block mixed-bg" style="flex: 2;">
-                <h2><i class="bi bi-trash"></i> ZMIESZANE (Czarny)</h2>
-                <p><strong>Wrzucamy:</strong> wszystko to, czego nie da się wysegregować (np. zużyte pieluchy, paragony, resztki mięsne, zatłuszczony papier, niedopałki papierosów).</p>
-                <p><strong>Nie wrzucamy:</strong> elektrośmieci, baterii, leków, odpadów budowlanych.</p>
+            <section class="kolumna bin-card bin-black">
+                <h2><i class="bi bi-trash3"></i> Zmieszane (Czarny / Szary)</h2>
+                <p><strong>WRZUCAMY:</strong> wszystko to, czego nie można odzyskać w recyklingu: resztki mięsne i kości, zatłuszczony papier, zużyte pieluchy, ręczniki papierowe, paragony, stłuczoną porcelanę, żwirek dla kota.</p>
+                <p><strong>NIE WRZUCAMY:</strong> elektrośmieci, baterii, przeterminowanych leków, świetlówek, opon oraz gruzu budowlanego (te odpady oddajemy do PSZOK!).</p>
             </section>
         </div>
     </main>
@@ -75,19 +76,23 @@
         <div class="content footer-content">
             <h3>Kontakt</h3>
             <ul>
-                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
-                <li><i class="bi bi-envelope"></i> E-mail: kontakt@ekosort.pl</li>
+                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>E-mail: kontakt@ekosort.pl</li>
+                <li>Telefon: +48 42 123 45 67</li>
             </ul>
         </div>
         <div class="copyright">
-            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone.</p>
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone. Autor: Dominik Ciekański.</p>
         </div>
     </footer>
 
     <script>
         const hamburger = document.querySelector('#menu-toggle');
         const menu = document.querySelector('.menu');
-        hamburger.addEventListener('click', () => menu.classList.toggle('active'));
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
