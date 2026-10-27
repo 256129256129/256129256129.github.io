@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoSort - Poradnik segregacji śmieci</title>
+    
+    <!-- 1) Informacja o autorze -->
+    <meta name="author" content="Dominik Ciekański">
+    <!-- 2) Krótki opis treści dokumentu -->
+    <meta name="description" content="EkoSort to portal edukacyjny, który pomaga prawidłowo segregować odpady. Poznaj zasady recyklingu i punkty zbiórki.">
+    <!-- 3) Słowa kluczowe -->
+    <meta name="keywords" content="segregacja śmieci, recykling, odpady, ekologia, kosze na śmieci, pszok">
+    
+    <!-- Bootstrap Icons (Ćwiczenie 4 & mail.txt) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Linkowanie pliku CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- 4) blok div z identyfikatorem class="content" -->
+        <div class="content">
+            <!-- 5) logo będące jednocześnie linkiem -->
+            <a href="index.html" class="logo">EkoSort ♻️</a>
+            <!-- 6) slogan opisujący zawartość w znaczniku p -->
+            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
+        </div>
+    </header>
+
+    <!-- Przycisk menu mobilnego (hamburger menu z Ćwiczenia 4 i to do.txt) -->
+    <button id="menu-toggle" aria-label="Otwórz menu">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- 7) przyciski nawigacji w strukturze grupującej ul -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="segregacja.html">Segregacja odpadów</a></li>
+            <li><a href="gdzie-wyrzucic.html">Gdzie wyrzucić?</a></li>
+            <li><a href="punkty.html">Punkty zbiórki</a></li>
+            <li><a href="poradnik.html">EkoPoradnik</a></li>
+            <li><a href="quiz.html">EkoQuiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- 1. obrazek będący banerem -->
+        <div class="banner">
+            <img src="baner-placeholder.jpg" alt="Baner EkoSort - Kolorowe kosze na śmieci">
+        </div>
+
+        <!-- 2. Trzy kolumny (div + 3x section z class="kolumna" zgodnie z to do.txt i Ćwiczeniem 3) -->
+        <div class="content-blocks">
+            <!-- Kolumna 1: O portalu -->
+            <section class="kolumna">
+                <h2>O portalu EkoSort</h2>
+                <p>Jesteśmy portalem edukacyjnym, którego celem jest ułatwienie codziennej segregacji odpadów. Dowiesz się u nas, co oznaczają poszczególne kolory koszy i co dzieje się z Twoimi śmieciami po wyrzuceniu.</p>
+            </section>
+
+            <!-- Kolumna 2: Zasady segregacji -->
+            <section class="kolumna">
+                <h2>Zasady segregacji</h2>
+                <p>Poznaj szczegółowe wytyczne dla 5 głównych frakcji: papieru, szkła, metali i tworzyw sztucznych, bioodpadów oraz odpadów zmieszanych.</p>
+                <a href="segregacja.html" class="btn-more">więcej</a>
+            </section>
+
+            <!-- Kolumna 3: Wyszukiwarka odpadów -->
+            <section class="kolumna">
+                <h2>Wyszukiwarka odpadów</h2>
+                <p>Masz problem z nietypowym odpadem? Sprawdź w naszej bazie, gdzie wyrzucić karton po mleku, potłuczoną szklankę czy starą baterię.</p>
+                <a href="gdzie-wyrzucic.html" class="btn-more">więcej</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 1. div z class="content" i class="footer-content" (Ćwiczenie 3) -->
+        <div class="content footer-content">
+            <h3>Kontakt</h3>
+            <ul>
+                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>E-mail: kontakt@ekosort.pl</li>
+            </ul>
+        </div>
+        
+        <!-- 2. Kolejny div z identyfikatorem class="copyright" -->
+        <div class="copyright">
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Skrypt JS obsługujący hamburger menu (Ćwiczenie 4) -->
+    <script>
+        const hamburger = document.querySelector('#menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
