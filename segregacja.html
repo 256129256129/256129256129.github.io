@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasady Segregacji - EkoSort</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <a href="index.html" class="logo">EkoSort ♻️</a>
+            <p class="slogan">Poznaj zasady, które chronią naszą planetę.</p>
+        </div>
+    </header>
+
+    <button id="menu-toggle" aria-label="Otwórz menu">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="segregacja.html" class="active-page">Segregacja odpadów</a></li>
+            <li><a href="gdzie-wyrzucic.html">Gdzie wyrzucić?</a></li>
+            <li><a href="#punkty" onclick="alert('Sekcja w budowie!')">Punkty zbiórki</a></li>
+            <li><a href="#poradnik" onclick="alert('EkoPoradnik w przygotowaniu!')">EkoPoradnik</a></li>
+            <li><a href="#quiz" onclick="alert('EkoQuiz niebawem!')">EkoQuiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="subpage-intro">
+            <h1>Zasady Segregacji Odpadów</h1>
+            <p>Prawidłowe dzielenie śmieci na frakcje pozwala na ich skuteczny recykling. Oto 5 podstawowych grup:</p>
+        </div>
+
+        <div class="content-blocks">
+            <section class="kolumna color-block paper-bg">
+                <h2><i class="bi bi-journal-album"></i> PAPIER (Niebieski)</h2>
+                <p><strong>Wrzucamy:</strong> zeszyty, kartony, gazety, papier pakowy, torby papierowe.</p>
+                <p><strong>Nie wrzucamy:</strong> tłustego papieru, paragonów, ręczników papierowych, kartonów po mleku (Tetra Pak).</p>
+            </section>
+
+            <section class="kolumna color-block plastic-bg">
+                <h2><i class="bi bi-recycle"></i> PLASTIK I METALE (Żółty)</h2>
+                <p><strong>Wrzucamy:</strong> zgniecione butelki PET, puszki po napojach i konserwach, kapsle, kartony po sokach/mleku.</p>
+                <p><strong>Nie wrzucamy:</strong> zużytych baterii, opakowań po lekach, puszek po farbach, zabawek na baterie.</p>
+            </section>
+
+            <section class="kolumna color-block glass-bg">
+                <h2><i class="bi bi-cup-straw"></i> SZKŁO (Zielony)</h2>
+                <p><strong>Wrzucamy:</strong> puste butelki i słoiki po napojach i żywności, szklane opakowania po kosmetykach.</p>
+                <p><strong>Nie wrzucamy:</strong> ceramiki, fajansu, kryształów, szyb, żarówek, luster, zniczy.</p>
+            </section>
+        </div>
+
+        <div class="content-blocks" style="margin-top: 20px;">
+            <section class="kolumna color-block bio-bg" style="flex: 2;">
+                <h2><i class="bi bi-trash3"></i> BIO (Brązowy)</h2>
+                <p><strong>Wrzucamy:</strong> odpadki warzywne i owocowe, gałęzie, skoszoną trawę, fusy po kawie/herbacie, skorupki jaj.</p>
+                <p><strong>Nie wrzucamy:</strong> kości i ości, mięsa, odchodów zwierząt, ziemi, oleju jadalnego.</p>
+            </section>
+
+            <section class="kolumna color-block mixed-bg" style="flex: 2;">
+                <h2><i class="bi bi-trash"></i> ZMIESZANE (Czarny)</h2>
+                <p><strong>Wrzucamy:</strong> wszystko to, czego nie da się wysegregować (np. zużyte pieluchy, paragony, resztki mięsne, zatłuszczony papier, niedopałki papierosów).</p>
+                <p><strong>Nie wrzucamy:</strong> elektrośmieci, baterii, leków, odpadów budowlanych.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content footer-content">
+            <h3>Kontakt</h3>
+            <ul>
+                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li><i class="bi bi-envelope"></i> E-mail: kontakt@ekosort.pl</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('#menu-toggle');
+        const menu = document.querySelector('.menu');
+        hamburger.addEventListener('click', () => menu.classList.toggle('active'));
+    </script>
+</body>
+</html>
