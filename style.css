@@ -1,4 +1,4 @@
-/* style.css - Style dla witryny EkoSort (Ćwiczenie 3 i 4) */
+/* style.css - Kompleksowy arkusz stylów dla witryny EkoSort (Ćwiczenia 2, 3 i 4) */
 
 /* 1. Reset domyślnych stylów przeglądarki (Ćwiczenie 3) */
 * {
@@ -11,7 +11,7 @@ html {
     min-height: 100%;
 }
 
-/* Definicja stylów dla elementu <body> i utworzenie kontenera Flexbox */
+/* Definicja stylów dla elementu <body> i utworzenie kontenera Flexbox (Ćwiczenie 3) */
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -22,7 +22,7 @@ body {
     color: #333;
 }
 
-/* 2. Header (Ćwiczenie 3) */
+/* 2. Header (Ćwiczenie 2 i 3) */
 header {
     background-color: #2e7d32;
     color: white;
@@ -31,7 +31,7 @@ header {
 }
 
 .logo {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -40,10 +40,10 @@ header {
 .slogan {
     margin-top: 5px;
     font-style: italic;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
-/* Przycisk hamburgera (Ćwiczenie 4) */
+/* Przycisk hamburgera - domyślnie ukryty na komputerze, widoczny na ekranach <=768px (Ćwiczenie 4) */
 #menu-toggle {
     display: none;
     justify-content: center;
@@ -56,7 +56,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* Ikona Bootstrap */
 #menu-toggle i {
     font-size: 2rem;
     color: white;
@@ -64,7 +63,6 @@ header {
     transition: transform 0.3s ease;
 }
 
-/* Efekt hover dla przycisku hamburgera */
 #menu-toggle:hover {
     background-color: #388e3c;
 }
@@ -95,7 +93,12 @@ nav a {
     padding: 15px 25px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
     transition: all 0.3s ease;
+}
+
+nav a.active-page {
+    background-color: #2e7d32;
 }
 
 /* 9. Animacja menu głównego - efekty tylko dla komputerów (Ćwiczenie 3) */
@@ -118,13 +121,18 @@ main {
     padding-bottom: 20px;
 }
 
+/* Baner */
+.banner {
+    width: 100%;
+}
+
 .banner img {
     display: block;
     width: 100%;
-    height: 250px;
-    background-color: #e0e0e0;
+    max-height: 360px;
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Kontener na 3 kolumny obok siebie */
@@ -134,40 +142,88 @@ main {
     flex: 1;
 }
 
-/* 5. Styl pojedynczej kolumny i jej zawartości (Ćwiczenie 3 & to do.txt) */
+/* 5. Styl pojedynczej kolumny i jej zawartości (Ćwiczenie 3 i to do.txt) */
 .kolumna {
     flex: 1;
     background-color: #ecf0f1;
     padding: 20px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .kolumna h2 {
     color: #2e7d32;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 1.35rem;
 }
 
 .kolumna img {
     width: 100%;
     height: auto;
+    border-radius: 6px;
 }
 
 .btn-more {
     display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background-color: #4caf50;
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 10px 18px;
+    background-color: #2e7d32;
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-more:hover {
-    background-color: #388e3c;
+    background-color: #1b5e20;
+    transform: translateY(-2px);
 }
 
-/* 6. Styl stopki (Ćwiczenie 3) */
+/* Elementy podstron (nagłówki sekcji, karty pojemników i wyszukiwarka) */
+.subpage-intro {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #2e7d32;
+}
+
+.subpage-intro h1 {
+    color: #1b5e20;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+}
+
+.search-box {
+    margin-top: 15px;
+}
+
+#waste-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #2e7d32;
+    border-radius: 6px;
+    outline: none;
+}
+
+#waste-input:focus {
+    box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
+}
+
+/* Kolorowe akcenty dla 5 frakcji na podstronie Segregacja */
+.bin-blue { border-top: 6px solid #1976d2; }
+.bin-yellow { border-top: 6px solid #fbc02d; }
+.bin-green { border-top: 6px solid #388e3c; }
+.bin-brown { border-top: 6px solid #6d4c41; }
+.bin-black { border-top: 6px solid #424242; }
+
+/* 6. Styl stopki (Ćwiczenie 2 i 3) */
 footer {
     background-color: #2e7d32;
     color: white;
@@ -180,7 +236,11 @@ footer {
     width: min(1200px, 90%);
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
+}
+
+.footer-content h3 {
+    margin-bottom: 8px;
 }
 
 footer .content ul {
@@ -196,7 +256,7 @@ footer .copyright {
     background-color: #1b5e20;
     text-align: center;
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     border-radius: 4px;
 }
 
@@ -236,6 +296,6 @@ footer .copyright {
     }
 
     .logo {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
