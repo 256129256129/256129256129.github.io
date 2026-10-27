@@ -1,0 +1,241 @@
+/* style.css - Style dla witryny EkoSort (Ćwiczenie 3 i 4) */
+
+/* 1. Reset domyślnych stylów przeglądarki (Ćwiczenie 3) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+/* Definicja stylów dla elementu <body> i utworzenie kontenera Flexbox */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 2. Header (Ćwiczenie 3) */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.slogan {
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Przycisk hamburgera (Ćwiczenie 4) */
+#menu-toggle {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #1b5e20;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Ikona Bootstrap */
+#menu-toggle i {
+    font-size: 2rem;
+    color: white;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Efekt hover dla przycisku hamburgera */
+#menu-toggle:hover {
+    background-color: #388e3c;
+}
+
+#menu-toggle:hover i {
+    transform: rotate(90deg);
+}
+
+/* 3. Styl menu nawigacyjnego (Ćwiczenie 3 i 4) */
+nav {
+    background-color: #1b5e20;
+}
+
+nav ul,
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* 9. Animacja menu głównego - efekty tylko dla komputerów (Ćwiczenie 3) */
+@media (hover: hover) {
+    nav a:hover {
+        background-color: #4caf50;
+        transform: scale(1.05);
+    }
+}
+
+/* 4. Styl głównej zawartości strony (main) (Ćwiczenie 3) */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 3rem);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-color: #e0e0e0;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Kontener na 3 kolumny obok siebie */
+.content-blocks {
+    display: flex;
+    gap: clamp(1rem, 2vw, 3rem);
+    flex: 1;
+}
+
+/* 5. Styl pojedynczej kolumny i jej zawartości (Ćwiczenie 3 & to do.txt) */
+.kolumna {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.kolumna h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.kolumna img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-more:hover {
+    background-color: #388e3c;
+}
+
+/* 6. Styl stopki (Ćwiczenie 3) */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: clamp(10px, 2vw, 20px);
+    margin-top: auto;
+}
+
+.footer-content {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .content ul li {
+    margin-bottom: 5px;
+}
+
+footer .copyright {
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+/* 7 & 8. Responsywność strony i wersja mobilna (Ćwiczenie 3 i 4) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .content-blocks {
+        flex-direction: column;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    nav li {
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+}
