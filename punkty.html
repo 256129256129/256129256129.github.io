@@ -13,46 +13,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Sekcja mapy Google */
-
-        .map-section {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .map-section h2 {
-            color: #2e7d32;
-            margin-bottom: 15px;
-        }
-
-        .map-section p {
-            margin-bottom: 20px;
-        }
-
-        .map-container {
-            width: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .map-container iframe {
-            display: block;
-            width: 100%;
-            height: 450px;
-            border: none;
-        }
-
-        @media (max-width: 768px) {
-            .map-container iframe {
-                height: 350px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -60,11 +20,13 @@
     <header>
         <div class="content">
             <a href="index.html" class="logo">EkoSort ♻️</a>
-            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
+            <p class="slogan">
+                Segreguj mądrze! Twój przewodnik po świecie recyklingu.
+            </p>
         </div>
     </header>
 
-    <button id="menu-toggle" aria-label="Otwórz menu">
+    <button id="menu-toggle" aria-label="Otwórz menu" aria-expanded="false">
         <i class="bi bi-list"></i>
     </button>
 
@@ -86,42 +48,139 @@
             </h1>
 
             <p>
-                Do punktów PSZOK mieszkańcy mogą bezpłatnie oddać odpady problemowe:
-                stare meble (gabaryty), zużyty sprzęt RTV/AGD, opony,
-                gruz poremontowy, farby oraz chemikalia.
+                Do punktów PSZOK mieszkańcy mogą bezpłatnie oddać
+                odpady problemowe, takie jak stare meble, zużyty sprzęt
+                RTV/AGD, opony, gruz poremontowy, farby oraz chemikalia.
             </p>
         </div>
+
+        <!-- LISTA PUNKTÓW PSZOK -->
 
         <div class="content-blocks">
 
             <section class="kolumna">
-                <h2>PSZOK Łódź – Bałuty</h2>
+                <h2>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    PSZOK Łódź – Bałuty
+                </h2>
 
-                <p><strong>Adres:</strong> ul. Kasprowicza 10, 91-212 Łódź</p>
+                <p>
+                    <strong>Adres:</strong>
+                    ul. Kasprowicza 10, 91-212 Łódź
+                </p>
 
-                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–18:00, Sob: 8:00–14:00</p>
+                <p>
+                    <strong>Godziny otwarcia:</strong>
+                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
+                </p>
 
-                <p><strong>Przyjmowane odpady:</strong> elektrośmieci, meble, opony, odpady zielone, gruz budowlany.</p>
+                <p>
+                    <strong>Przyjmowane odpady:</strong>
+                    elektrośmieci, baterie, świetlówki, farby,
+                    odpady wielkogabarytowe, odpady budowlane,
+                    opony i tekstylia.
+                </p>
+
+                <a class="btn-more"
+                   href="https://www.google.com/maps/search/?api=1&query=ul.+Kasprowicza+10+Łódź"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </a>
             </section>
 
             <section class="kolumna">
-                <h2>PSZOK Łódź – Widzew</h2>
+                <h2>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    PSZOK Łódź – Widzew
+                </h2>
 
-                <p><strong>Adres:</strong> ul. Graniczna 2, 93-428 Łódź</p>
+                <p>
+                    <strong>Adres:</strong>
+                    ul. Graniczna 2, 93-428 Łódź
+                </p>
 
-                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–18:00, Sob: 8:00–14:00</p>
+                <p>
+                    <strong>Godziny otwarcia:</strong>
+                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
+                </p>
 
-                <p><strong>Przyjmowane odpady:</strong> zużyte baterie i akumulatory, świetlówki, tekstylia, chemikalia, gabaryty.</p>
+                <p>
+                    <strong>Przyjmowane odpady:</strong>
+                    zużyty sprzęt RTV/AGD, baterie,
+                    chemikalia, meble, odpady budowlane,
+                    opony i tekstylia.
+                </p>
+
+                <a class="btn-more"
+                   href="https://www.google.com/maps/search/?api=1&query=ul.+Graniczna+2+Łódź"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </a>
             </section>
 
             <section class="kolumna">
-                <h2>PSZOK Łódź – Polesie</h2>
+                <h2>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    PSZOK Łódź – Polesie
+                </h2>
 
-                <p><strong>Adres:</strong> ul. Zamiejska 1, 94-112 Łódź</p>
+                <p>
+                    <strong>Adres:</strong>
+                    ul. Zamiejska 1, 94-112 Łódź
+                </p>
 
-                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–18:00, Sob: 8:00–14:00</p>
+                <p>
+                    <strong>Godziny otwarcia:</strong>
+                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
+                </p>
 
-                <p><strong>Przyjmowane odpady:</strong> sprzęt RTV/AGD, stolarka okienna, ceramika łazienkowa, opony osobowe.</p>
+                <p>
+                    <strong>Przyjmowane odpady:</strong>
+                    sprzęt elektryczny i elektroniczny,
+                    meble, odpady wielkogabarytowe,
+                    odpady budowlane, opony,
+                    baterie i chemikalia.
+                </p>
+
+                <a class="btn-more"
+                   href="https://www.google.com/maps/search/?api=1&query=ul.+Zamiejska+1+Łódź"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </a>
+            </section>
+
+            <section class="kolumna">
+                <h2>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    PSZOK Łódź – Wersalska
+                </h2>
+
+                <p>
+                    <strong>Adres:</strong>
+                    ul. Wersalska 39, Łódź
+                </p>
+
+                <p>
+                    <strong>Godziny otwarcia:</strong>
+                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
+                </p>
+
+                <p>
+                    <strong>Przyjmowane odpady:</strong>
+                    odpady problemowe z gospodarstw domowych,
+                    elektrośmieci, odpady wielkogabarytowe,
+                    odpady budowlane i opony.
+                </p>
+
+                <a class="btn-more"
+                   href="https://www.google.com/maps/search/?api=1&query=ul.+Wersalska+39+Łódź"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </a>
             </section>
 
         </div>
@@ -132,11 +191,12 @@
 
             <h2>
                 <i class="bi bi-map"></i>
-                Lokalizacja punktów PSZOK w Łodzi
+                Mapa punktów PSZOK w Łodzi
             </h2>
 
             <p>
-                Sprawdź lokalizację punktów zbiórki odpadów na mapie Google.
+                Znajdź najbliższy punkt zbiórki odpadów
+                i sprawdź jego lokalizację.
             </p>
 
             <div class="map-container">
@@ -146,7 +206,7 @@
                     allowfullscreen
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="Mapa punktów PSZOK w Łodzi">
+                    title="Mapa PSZOK w Łodzi">
                 </iframe>
 
             </div>
@@ -178,14 +238,29 @@
 
     </footer>
 
+    <!-- JAVASCRIPT MENU -->
+
     <script>
         const hamburger = document.querySelector('#menu-toggle');
         const menu = document.querySelector('.menu');
 
         hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
+
+            const otwarte = menu.classList.toggle('active');
+
+            hamburger.setAttribute(
+                'aria-expanded',
+                String(otwarte)
+            );
+
+            hamburger.setAttribute(
+                'aria-label',
+                otwarte ? 'Zamknij menu' : 'Otwórz menu'
+            );
+
         });
     </script>
 
 </body>
 </html>
+
