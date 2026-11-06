@@ -1,7 +1,5 @@
 
-/* =========================================
-   EKOSORT - GŁÓWNY ARKUSZ STYLÓW
-   ========================================= */
+/* style.css - EkoSort */
 
 /* 1. RESET */
 
@@ -15,6 +13,8 @@ html {
     min-height: 100%;
 }
 
+/* 2. BODY */
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -25,7 +25,7 @@ body {
     color: #333;
 }
 
-/* 2. HEADER */
+/* 3. HEADER */
 
 header {
     background-color: #2e7d32;
@@ -47,7 +47,7 @@ header {
     opacity: 0.95;
 }
 
-/* 3. MENU HAMBURGER */
+/* 4. MENU HAMBURGER */
 
 #menu-toggle {
     display: none;
@@ -76,7 +76,7 @@ header {
     transform: rotate(90deg);
 }
 
-/* 4. MENU NAWIGACYJNE */
+/* 5. MENU NAWIGACYJNE */
 
 nav {
     background-color: #1b5e20;
@@ -107,7 +107,7 @@ nav a.active-page {
     background-color: #2e7d32;
 }
 
-/* Efekt po najechaniu */
+/* Efekty menu na komputerach */
 
 @media (hover: hover) {
     nav a:hover {
@@ -116,7 +116,7 @@ nav a.active-page {
     }
 }
 
-/* 5. GŁÓWNA ZAWARTOŚĆ */
+/* 6. MAIN */
 
 main {
     flex: 1;
@@ -144,20 +144,18 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 6. KARTY PUNKTÓW PSZOK */
-
-/* Układ dwóch kolumn */
+/* 7. ORYGINALNY UKŁAD KOLUMN */
 
 .content-blocks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: clamp(1rem, 2vw, 3rem);
-    width: 100%;
+    flex: 1;
 }
 
-/* Pojedyncza karta */
+/* 8. KOLUMNY */
 
 .kolumna {
+    flex: 1;
     background-color: #ecf0f1;
     padding: 20px;
     border-radius: 8px;
@@ -165,13 +163,6 @@ main {
     flex-direction: column;
     gap: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #2e7d32;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.kolumna:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .kolumna h2 {
@@ -180,21 +171,13 @@ main {
     font-size: 1.35rem;
 }
 
-.kolumna h2 i {
-    margin-right: 5px;
-}
-
-.kolumna p {
-    margin-bottom: 3px;
-}
-
 .kolumna img {
     width: 100%;
     height: auto;
     border-radius: 6px;
 }
 
-/* 7. PRZYCISK POKAŻ NA MAPIE */
+/* 9. PRZYCISKI */
 
 .btn-more {
     display: inline-block;
@@ -215,7 +198,7 @@ main {
     transform: translateY(-2px);
 }
 
-/* 8. ELEMENTY PODSTRON */
+/* 10. PODSTRONY */
 
 .subpage-intro {
     background-color: #ecf0f1;
@@ -229,12 +212,6 @@ main {
     margin-bottom: 8px;
     font-size: 1.6rem;
 }
-
-.subpage-intro p {
-    margin-top: 5px;
-}
-
-/* Wyszukiwarka */
 
 .search-box {
     margin-top: 15px;
@@ -254,7 +231,7 @@ main {
     box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
 }
 
-/* 9. KOLORY POJEMNIKÓW */
+/* 11. KOLORY POJEMNIKÓW */
 
 .bin-blue {
     border-top: 6px solid #1976d2;
@@ -276,40 +253,7 @@ main {
     border-top: 6px solid #424242;
 }
 
-/* 10. MAPA GOOGLE */
-
-.map-section {
-    width: 100%;
-    text-align: center;
-    margin: 10px auto;
-}
-
-.map-section h2 {
-    color: #2e7d32;
-    margin-bottom: 12px;
-    font-size: 1.6rem;
-}
-
-.map-section p {
-    margin-bottom: 20px;
-}
-
-.map-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 3px solid white;
-}
-
-.map-container iframe {
-    display: block;
-    width: 100%;
-    height: 450px;
-    border: none;
-}
-
-/* 11. STOPKA */
+/* 12. STOPKA */
 
 footer {
     background-color: #2e7d32;
@@ -347,7 +291,77 @@ footer .copyright {
     border-radius: 4px;
 }
 
-/* 12. RESPONSYWNOŚĆ - TABLETY I TELEFONY */
+/* =========================================
+   13. STYLE TYLKO DLA PUNKTY.HTML
+   ========================================= */
+
+/* Cztery karty w układzie 2x2 */
+
+.punkty-page .content-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 2vw, 3rem);
+    width: 100%;
+    flex: none;
+}
+
+.punkty-page .kolumna {
+    border-left: 5px solid #2e7d32;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.punkty-page .kolumna:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.punkty-page .kolumna h2 {
+    color: #2e7d32;
+}
+
+/* Mapa Google */
+
+.punkty-page .map-section {
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.punkty-page .map-section h2 {
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.punkty-page .map-section p {
+    margin-bottom: 20px;
+}
+
+.punkty-page .map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 3px solid white;
+}
+
+.punkty-page .map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.punkty-page .map-note {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* =========================================
+   14. RESPONSYWNOŚĆ
+   ========================================= */
 
 @media (max-width: 768px) {
 
@@ -357,10 +371,10 @@ footer .copyright {
         padding-right: 5%;
     }
 
-    /* Jedna karta pod drugą */
+    /* Oryginalne ustawienie pozostałych podstron */
 
     .content-blocks {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     /* Menu mobilne */
@@ -392,44 +406,31 @@ footer .copyright {
         font-size: 2rem;
     }
 
-    .map-container iframe {
-        height: 350px;
+    /* Tylko strona PSZOK */
+
+    .punkty-page .content-blocks {
+        grid-template-columns: 1fr;
     }
 
-    .kolumna {
-        padding: 18px;
+    .punkty-page .map-container iframe {
+        height: 350px;
     }
 }
 
-/* 13. MAŁE TELEFONY */
+/* Małe telefony */
 
 @media (max-width: 480px) {
 
-    header {
-        padding: 15px 10px;
+    .punkty-page .map-container iframe {
+        height: 300px;
     }
 
-    .logo {
-        font-size: 1.8rem;
-    }
-
-    .slogan {
-        font-size: 0.9rem;
-    }
-
-    .subpage-intro h1 {
+    .punkty-page .map-section h2 {
         font-size: 1.3rem;
     }
 
-    .kolumna h2 {
+    .punkty-page .kolumna h2 {
         font-size: 1.2rem;
     }
 
-    .map-section h2 {
-        font-size: 1.3rem;
-    }
-
-    .map-container iframe {
-        height: 300px;
-    }
 }
