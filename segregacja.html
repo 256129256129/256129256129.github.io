@@ -18,56 +18,74 @@
         </div>
     </header>
 
-    <button id="menu-toggle" aria-label="Otwórz menu">
-        <i class="bi bi-list"></i>
-    </button>
+    <div class="sticky-nav-wrapper">
+        <button id="menu-toggle" aria-label="Otwórz menu">
+            <i class="bi bi-list"></i> Menu
+        </button>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="segregacja.html" class="active-page">Zasady segregacji</a></li>
-            <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
-            <li><a href="punkty.html">Punkty zbiórki</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="segregacja.html" class="active-page">Zasady segregacji</a></li>
+                <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
+                <li><a href="gdzie-wyrzucic.html">Odpady problemowe i kalkulator</a></li>
+                <li class="dropdown">
+                    <a href="punkty.html">Punkty PSZOK w Łodzi</a>
+                    <ul class="submenu">
+                        <li><a href="punkty.html#pszok-1"><i class="bi bi-geo-alt"></i> PSZOK Bałuty – Kasprowicza 10</a></li>
+                        <li><a href="punkty.html#pszok-2"><i class="bi bi-geo-alt"></i> PSZOK Górna – Graniczna 2</a></li>
+                        <li><a href="punkty.html#pszok-3"><i class="bi bi-geo-alt"></i> PSZOK Dąbrowa – Zamiejska 1</a></li>
+                        <li><a href="punkty.html#pszok-4"><i class="bi bi-geo-alt"></i> PSZOK Polesie – Związkowa 2a</a></li>
+                        <li><a href="punkty.html#pszok-5"><i class="bi bi-geo-alt"></i> PSZOK Teofilów – Wersalska 47/75</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <div class="subpage-intro">
-            <h1>Zasady segregacji odpadów (System 5 frakcji)</h1>
-            <p>W całej Polsce obowiązuje Jednolity System Segregacji Odpadów (JSSO). Poniżej znajdziesz dokładną ściągawkę, co wrzucać, a czego unikać w każdym z 5 pojemników.</p>
+            <h1><i class="bi bi-recycle"></i> Zasady segregacji odpadów (System 5 frakcji)</h1>
+            <p>W całej Polsce obowiązuje Jednolity System Segregacji Odpadów. Poniżej znajdziesz szczegółową ściągawkę, co wrzucać, a czego unikać w każdym z pojemników.</p>
         </div>
 
         <div class="content-blocks">
             <section class="kolumna bin-card bin-blue">
                 <h2><i class="bi bi-journal-text"></i> Papier (Niebieski)</h2>
-                <p><strong>WRZUCAMY:</strong> gazety, czasopisma, zeszyty, książki, kartony, tekturę falistą, torby i opakowania papierowe.</p>
-                <p><strong>NIE WRZUCAMY:</strong> ręczników papierowych, zużytych chusteczek, papieru zatłuszczonego, paragonów, kartonów po mleku i sokach.</p>
+                <p><strong>Wrzucamy:</strong> gazety, czasopisma, zeszyty, książki, kartony, tekturę falistą, torby i opakowania papierowe.</p>
+                <p><strong>Nie wrzucamy:</strong> ręczników papierowych, zużytych chusteczek, papieru zatłuszczonego, paragonów, kartonów po mleku i sokach.</p>
             </section>
 
             <section class="kolumna bin-card bin-yellow">
                 <h2><i class="bi bi-cup-straw"></i> Metale i tworzywa (Żółty)</h2>
-                <p><strong>WRZUCAMY:</strong> zgniecione butelki PET, nakrętki, opakowania po jogurtach, reklamówki, puszki aluminiowe, фоlię, kartony wielomateriałowe (po mleku i sokach).</p>
-                <p><strong>NIE WRZUCAMY:</strong> butelek z zawartością, opakowań po lekach, zużytych baterii, sprzętu AGD, puszek po farbach i olejach.</p>
+                <p><strong>Wrzucamy:</strong> zgniecione butelki PET, nakrętki, opakowania po jogurtach, reklamówki, puszki aluminiowe, folię, kartony wielomateriałowe (po mleku i sokach).</p>
+                <p><strong>Nie wrzucamy:</strong> butelek z zawartością, opakowań po lekach, zużytych baterii, sprzętu AGD, puszek po farbach i olejach.</p>
             </section>
 
             <section class="kolumna bin-card bin-green">
                 <h2><i class="bi bi-droplet"></i> Szkło (Zielony)</h2>
-                <p><strong>WRZUCAMY:</strong> butelki i słoiki po napojach i żywności (bez nakrętek), szklane opakowania po kosmetykach.</p>
-                <p><strong>NIE WRZUCAMY:</strong> ceramiki, doniczek, porcelany, szklanek, kieliszków, szkła żaroodpornego, żarówek, luster, szyb okiennych i zniczy z woskiem.</p>
+                <p><strong>Wrzucamy:</strong> butelki i słoiki po napojach i żywności (bez nakrętek), szklane opakowania po kosmetykach.</p>
+                <p><strong>Nie wrzucamy:</strong> ceramiki, doniczek, porcelany, szklanek, kieliszków, szkła żaroodpornego, żarówek, świetlówek, luster i szyb okiennych.</p>
             </section>
         </div>
 
         <div class="content-blocks">
             <section class="kolumna bin-card bin-brown">
                 <h2><i class="bi bi-tree"></i> Bioodpady (Brązowy)</h2>
-                <p><strong>WRZUCAMY:</strong> odpadki warzywne i owocowe, obierki, fusy po kawie i herbacie, skorupki jaj, skoszoną trawę, liście, drobne gałęzie, zwiędłe kwiaty.</p>
-                <p><strong>NIE WRZUCAMY:</strong> resztek mięsa i kości, ości, oleju jadalnego, odchodów zwierzęcych, popiołu z węgla, płyt wiórowych.</p>
+                <p><strong>Wrzucamy:</strong> odpadki warzywne i owocowe, obierki, fusy po kawie i herbacie, skorupki jaj, skoszoną trawę, liście, drobne gałęzie, zwiędłe kwiaty.</p>
+                <p><strong>Nie wrzucamy:</strong> resztek mięsa i kości, ości, oleju jadalnego, odchodów zwierzęcych, popiołu z węgla, worków foliowych.</p>
             </section>
 
             <section class="kolumna bin-card bin-black">
-                <h2><i class="bi bi-trash3"></i> Zmieszane (Czarny / Szary)</h2>
-                <p><strong>WRZUCAMY:</strong> wszystko to, czego nie można odzyskać w recyklingu: resztki mięsne i kości, zatłuszczony papier, zużyte pieluchy, ręczniki papierowe, paragony, stłuczoną porcelanę, żwirek dla kota.</p>
-                <p><strong>NIE WRZUCAMY:</strong> elektrośmieci, baterii, przeterminowanych leków, świetlówek, opon oraz gruzu budowlanego (te odpady oddajemy do PSZOK!).</p>
+                <h2><i class="bi bi-trash3"></i> Zmieszane (Czarny)</h2>
+                <p><strong>Wrzucamy:</strong> wszystko to, czego nie można odzyskać w recyklingu: resztki mięsne i kości, zatłuszczony papier, zużyte artykuły higieniczne, paragony, stłuczoną ceramikę, żwirek dla zwierząt.</p>
+                <p><strong>Nie wrzucamy:</strong> elektrośmieci, baterii, przeterminowanych leków, świetlówek, opon oraz gruzu budowlanego.</p>
+            </section>
+
+            <section class="kolumna bin-card bin-pszok">
+                <h2><i class="bi bi-building-check"></i> Punkty PSZOK</h2>
+                <p><strong>Oddajemy bezpłatnie:</strong> odpady wielkogabarytowe (meble), zużyty sprzęt RTV/AGD, baterie, opony, gruz poremontowy, farby oraz świetlówki.</p>
+                <a href="punkty.html" class="btn-more">Zobacz punkty w Łodzi</a>
             </section>
         </div>
     </main>
@@ -76,9 +94,13 @@
         <div class="content footer-content">
             <h3>Kontakt</h3>
             <ul>
-                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
-                <li>E-mail: kontakt@ekosort.pl</li>
-                <li>Telefon: +48 42 123 45 67</li>
+                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>
+                    <a href="mailto:kontakt@ekosort.pl?subject=Pytanie%20dotyczace%20segregacji%20odpadow" class="footer-mail-link">
+                        <i class="bi bi-envelope-fill"></i> kontakt@ekosort.pl
+                    </a>
+                </li>
+                <li><i class="bi bi-telephone"></i> Telefon: +48 42 123 45 67</li>
             </ul>
         </div>
         <div class="copyright">

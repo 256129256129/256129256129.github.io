@@ -3,80 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EkoSort - Poradnik segregacji śmieci</title>
-    
-    <!-- Metadane wymagane w Ćwiczeniu 2 -->
+    <title>EkoSort Łódź – Przewodnik po segregacji odpadów</title>
     <meta name="author" content="Dominik Ciekański">
-    <meta name="description" content="EkoSort to portal edukacyjny, który pomaga prawidłowo segregować odpady. Poznaj zasady recyklingu, wyszukiwarkę odpadów i punkty zbiórki.">
-    <meta name="keywords" content="segregacja śmieci, recykling, odpady, ekologia, kosze na śmieci, pszok">
-    
-    <!-- Ikony Bootstrap (Ćwiczenie 4 i mail.txt) -->
+    <meta name="description" content="EkoSort to portal edukacyjny ułatwiający codzienną segregację odpadów w Łodzi. Sprawdź zasady segregacji, wyszukiwarkę odpadów i punkty PSZOK.">
+    <meta name="keywords" content="segregacja śmieci, recykling, odpady, Łódź, kosze na śmieci, pszok">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-    <!-- Arkusz stylów -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="content">
             <a href="index.html" class="logo">EkoSort ♻️</a>
-            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
+            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu w Łodzi.</p>
         </div>
     </header>
 
-    <!-- Przycisk menu mobilnego (Ćwiczenie 4) -->
-    <button id="menu-toggle" aria-label="Otwórz menu">
-        <i class="bi bi-list"></i>
-    </button>
+    <div class="sticky-nav-wrapper">
+        <button id="menu-toggle" aria-label="Otwórz menu">
+            <i class="bi bi-list"></i> Menu
+        </button>
 
-    <!-- Menu nawigacyjne (Ćwiczenie 2, 3 i 4) -->
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html" class="active-page">Strona główna</a></li>
-            <li><a href="segregacja.html">Zasady segregacji</a></li>
-            <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
-            <li><a href="punkty.html">Punkty zbiórki</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="active-page">Strona główna</a></li>
+                <li><a href="segregacja.html">Zasady segregacji</a></li>
+                <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
+                <li><a href="gdzie-wyrzucic.html">Odpady problemowe i kalkulator</a></li>
+                <li class="dropdown">
+                    <a href="punkty.html">Punkty PSZOK w Łodzi</a>
+                    <ul class="submenu">
+                        <li><a href="punkty.html#pszok-1"><i class="bi bi-geo-alt"></i> PSZOK Bałuty – Kasprowicza 10</a></li>
+                        <li><a href="punkty.html#pszok-2"><i class="bi bi-geo-alt"></i> PSZOK Górna – Graniczna 2</a></li>
+                        <li><a href="punkty.html#pszok-3"><i class="bi bi-geo-alt"></i> PSZOK Dąbrowa – Zamiejska 1</a></li>
+                        <li><a href="punkty.html#pszok-4"><i class="bi bi-geo-alt"></i> PSZOK Polesie – Związkowa 2a</a></li>
+                        <li><a href="punkty.html#pszok-5"><i class="bi bi-geo-alt"></i> PSZOK Teofilów – Wersalska 47/75</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
-        <!-- 1. Baner (odwołuje się do pliku baner-ekosort.jpg z Twojego repozytorium) -->
         <div class="banner">
             <img src="baner-ekosort.jpg" alt="Baner EkoSort - Kolorowe kosze na śmieci">
         </div>
 
-        <!-- 2. Trzy kolumny: div + 3x section class="kolumna" (Ćwiczenie 3 i to do.txt) -->
         <div class="content-blocks">
-            <!-- Kolumna 1 -->
             <section class="kolumna">
                 <h2><i class="bi bi-globe-europe-africa"></i> O portalu EkoSort</h2>
-                <p>Jesteśmy portalem edukacyjnym, którego celem jest ułatwienie codziennej segregacji odpadów w domach, szkołach i miejscach pracy.</p>
-                <p>Dowiesz się u nas, co oznaczają poszczególne kolory koszy, jak zmniejszyć ilość produkowanych śmieci oraz co dzieje się z surowcami po ich odebraniu.</p>
+                <p>Portal pomaga mieszkańcom Łodzi w prawidłowym dzieleniu odpadów domowych na pięć podstawowych frakcji surowcowych oraz bezpiecznym oddawaniu odpadów problemowych.</p>
+                <ul class="eko-lista">
+                    <li>Czytelne zasady podziału na 5 pojemników.</li>
+                    <li>Baza kłopotliwych odpadów z podpowiedziami.</li>
+                    <li>Aktualne adresy i mapa punktów PSZOK w Łodzi.</li>
+                </ul>
             </section>
 
-            <!-- Kolumna 2 -->
             <section class="kolumna">
                 <h2><i class="bi bi-recycle"></i> Zasady segregacji</h2>
-                <p>Poznaj szczegółowe wytyczne dla 5 głównych frakcji obowiązujących w Polsce: papieru, metali i tworzyw sztucznych, szkła, bioodpadów oraz odpadów zmieszanych.</p>
+                <p>Poznaj wytyczne dla pięciu frakcji obowiązujących w Łodzi: papieru, metali i tworzyw sztucznych, szkła opakowaniowego, bioodpadów oraz odpadów zmieszanych.</p>
+                <p>Sprawdź, jak przygotować opakowania przed wrzuceniem do pojemnika i jakich błędów unikać.</p>
                 <a href="segregacja.html" class="btn-more">Sprawdź zasady</a>
             </section>
 
-            <!-- Kolumna 3 -->
             <section class="kolumna">
-                <h2><i class="bi bi-search"></i> Wyszukiwarka odpadów</h2>
-                <p>Masz problem z nietypowym odpadem? Skorzystaj z naszej interaktywnej wyszukiwarki i sprawdź, gdzie wyrzucić karton po mleku, paragon, potłuczoną szklankę czy starą baterię.</p>
+                <h2><i class="bi bi-search"></i> Wyszukiwarka i kalkulator</h2>
+                <p>Masz wątpliwości, gdzie wyrzucić karton po mleku, paragon ze sklepu, potłuczoną szklankę, zużyte baterie lub przeterminowane leki?</p>
+                <p>Skorzystaj z naszej wyszukiwarki odpadów lub oblicz w kalkulatorze, ile surowców odzyskujesz w ciągu roku.</p>
                 <a href="wyszukiwarka.html" class="btn-more">Otwórz wyszukiwarkę</a>
             </section>
         </div>
+
+        <!-- Galeria najczęstszych błędów segregacji (płynna ciągła animacja, placeholdery pod zdjęcia) -->
+        <section class="sekcja-galerii">
+            <h2><i class="bi bi-images"></i> Najczęstsze błędy podczas segregacji odpadów</h2>
+            <p>Zobacz przykłady odpadów, które najczęściej trafiają do niewłaściwych pojemników i utrudniają proces recyklingu:</p>
+
+            <div class="galeria">
+                <div class="tor">
+                    <article class="karta-galerii">
+                        <div class="placeholder-foto">
+                            <i class="bi bi-box-seam"></i>
+                            <span>Miejsce na zdjęcie #1</span>
+                        </div>
+                        <div class="karta-galerii-opis">
+                            <h3>1. Tłusty karton po pizzy</h3>
+                            <p>Zabrudzony tłuszczem spód pudełka nie nadaje się na makulaturę – należy wrzucić go do odpadów zmieszanych.</p>
+                        </div>
+                    </article>
+
+                    <article class="karta-galerii">
+                        <div class="placeholder-foto">
+                            <i class="bi bi-battery-charging"></i>
+                            <span>Miejsce na zdjęcie #2</span>
+                        </div>
+                        <div class="karta-galerii-opis">
+                            <h3>2. Zużyte baterie w koszu</h3>
+                            <p>Baterie i akumulatorki należy oddawać do specjalnych pojemników w sklepach lub w punktach PSZOK.</p>
+                        </div>
+                    </article>
+
+                    <article class="karta-galerii">
+                        <div class="placeholder-foto">
+                            <i class="bi bi-receipt"></i>
+                            <span>Miejsce na zdjęcie #3</span>
+                        </div>
+                        <div class="karta-galerii-opis">
+                            <h3>3. Paragony w papierze</h3>
+                            <p>Papier termiczny z paragonów zawiera związki chemiczne i zawsze powinien trafiać do czarnego kosza.</p>
+                        </div>
+                    </article>
+
+                    <article class="karta-galerii">
+                        <div class="placeholder-foto">
+                            <i class="bi bi-bag-x"></i>
+                            <span>Miejsce na zdjęcie #4</span>
+                        </div>
+                        <div class="karta-galerii-opis">
+                            <h3>4. Bioodpady w folii</h3>
+                            <p>Obierki wrzucone w szczelnej reklamówce foliowej zanieczyszczają kompost. Wrzucaj je luzem lub w workach bio.</p>
+                        </div>
+                    </article>
+
+                    <article class="karta-galerii">
+                        <div class="placeholder-foto">
+                            <i class="bi bi-cup-straw"></i>
+                            <span>Miejsce na zdjęcie #5</span>
+                        </div>
+                        <div class="karta-galerii-opis">
+                            <h3>5. Karton po mleku w papierze</h3>
+                            <p>Opakowania typu Tetra Pak składają się z kilku warstw i powinny trafiać do żółtego pojemnika.</p>
+                        </div>
+                    </article>
+
+                    <article class="karta-galerii">
+                        <div class="placeholder-foto">
+                            <i class="bi bi-lightbulb"></i>
+                            <span>Miejsce na zdjęcie #6</span>
+                        </div>
+                        <div class="karta-galerii-opis">
+                            <h3>6. Ceramika i żarówki w szkle</h3>
+                            <p>Talerze, szklanki żaroodporne oraz świetlówki nie są szkłem opakowaniowym i psują wytop w hucie.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formularz kontaktowy / zgłoszeniowy -->
+        <section class="kolumna" id="formularz-kontaktowy">
+            <h2><i class="bi bi-envelope-paper"></i> Formularz kontaktowy i zgłoszeniowy</h2>
+            <p>Masz pytanie dotyczące nietypowego odpadu lub chcesz zgłosić przepełnione pojemniki w swojej okolicy? Napisz do nas:</p>
+
+            <form id="formularzEko">
+                <div class="form-grid">
+                    <div class="form-pole">
+                        <label for="imie">Imię i nazwisko:</label>
+                        <input type="text" id="imie" placeholder="np. Jan Kowalski" required>
+                    </div>
+                    <div class="form-pole">
+                        <label for="email">Adres e-mail:</label>
+                        <input type="email" id="email" placeholder="np. jan@domena.pl" required>
+                    </div>
+                    <div class="form-pole">
+                        <label for="dzielnica">Dzielnica Łodzi:</label>
+                        <select id="dzielnica" required>
+                            <option value="">-- Wybierz dzielnicę --</option>
+                            <option value="Bałuty">Bałuty</option>
+                            <option value="Górna">Górna</option>
+                            <option value="Polesie">Polesie</option>
+                            <option value="Śródmieście">Śródmieście</option>
+                            <option value="Widzew">Widzew</option>
+                        </select>
+                    </div>
+                    <div class="form-pole">
+                        <label for="temat">Temat wiadomości:</label>
+                        <select id="temat" required>
+                            <option value="Pytanie o segregację odpadu">Pytanie o segregację odpadu</option>
+                            <option value="Zgłoszenie przepełnionego pojemnika">Zgłoszenie przepełnionego pojemnika</option>
+                            <option value="Odbiór odpadów wielkogabarytowych">Odbiór odpadów wielkogabarytowych</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-pole" style="margin-top: 14px;">
+                    <label for="wiadomosc" style="min-height: auto;">Treść wiadomości:</label>
+                    <textarea id="wiadomosc" rows="3" placeholder="Wpisz swoją wiadomość..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-more" style="margin-top: 14px;">Wyślij wiadomość</button>
+                <div id="potwierdzenieFormularza" class="wynik-box" style="display: none;"></div>
+            </form>
+        </section>
     </main>
 
     <footer>
         <div class="content footer-content">
             <h3>Kontakt</h3>
             <ul>
-                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
-                <li>E-mail: kontakt@ekosort.pl</li>
-                <li>Telefon: +48 42 123 45 67</li>
+                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>
+                    <a href="mailto:kontakt@ekosort.pl?subject=Pytanie%20dotyczace%20segregacji%20odpadow" class="footer-mail-link">
+                        <i class="bi bi-envelope-fill"></i> kontakt@ekosort.pl
+                    </a>
+                </li>
+                <li><i class="bi bi-telephone"></i> Telefon: +48 42 123 45 67</li>
             </ul>
         </div>
         <div class="copyright">
@@ -84,13 +215,26 @@
         </div>
     </footer>
 
-    <!-- Skrypt JS do obsługi menu mobilnego (Ćwiczenie 4) -->
     <script>
         const hamburger = document.querySelector('#menu-toggle');
         const menu = document.querySelector('.menu');
 
         hamburger.addEventListener('click', () => {
             menu.classList.toggle('active');
+        });
+
+        const formularz = document.querySelector('#formularzEko');
+        const potwierdzenie = document.querySelector('#potwierdzenieFormularza');
+
+        formularz.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const imie = document.querySelector('#imie').value;
+            const dzielnica = document.querySelector('#dzielnica').value;
+            const temat = document.querySelector('#temat').value;
+
+            potwierdzenie.style.display = 'block';
+            potwierdzenie.innerHTML = `Dziękujemy za kontakt, <strong>${imie}</strong>. Twoja wiadomość w kategorii „${temat}” (dzielnica: ${dzielnica}) została wysłana.`;
+            formularz.reset();
         });
     </script>
 </body>

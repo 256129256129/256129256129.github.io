@@ -1,1 +1,3 @@
-# 256129256129.github.io
+# EkoSort Łódź
+
+Serwis informacyjny poświęcony selektywnej zbiórce odpadów komunalnych oraz punktom PSZOK w Łodzi.

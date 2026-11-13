@@ -18,78 +18,65 @@
         </div>
     </header>
 
-    <button id="menu-toggle" aria-label="Otwórz menu">
-        <i class="bi bi-list"></i>
-    </button>
+    <div class="sticky-nav-wrapper">
+        <button id="menu-toggle" aria-label="Otwórz menu">
+            <i class="bi bi-list"></i> Menu
+        </button>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="segregacja.html">Zasady segregacji</a></li>
-            <li><a href="wyszukiwarka.html" class="active-page">Wyszukiwarka odpadów</a></li>
-            <li><a href="punkty.html">Punkty zbiórki</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="segregacja.html">Zasady segregacji</a></li>
+                <li><a href="wyszukiwarka.html" class="active-page">Wyszukiwarka odpadów</a></li>
+                <li><a href="gdzie-wyrzucic.html">Odpady problemowe i kalkulator</a></li>
+                <li class="dropdown">
+                    <a href="punkty.html">Punkty PSZOK w Łodzi</a>
+                    <ul class="submenu">
+                        <li><a href="punkty.html#pszok-1"><i class="bi bi-geo-alt"></i> PSZOK Bałuty – Kasprowicza 10</a></li>
+                        <li><a href="punkty.html#pszok-2"><i class="bi bi-geo-alt"></i> PSZOK Górna – Graniczna 2</a></li>
+                        <li><a href="punkty.html#pszok-3"><i class="bi bi-geo-alt"></i> PSZOK Dąbrowa – Zamiejska 1</a></li>
+                        <li><a href="punkty.html#pszok-4"><i class="bi bi-geo-alt"></i> PSZOK Polesie – Związkowa 2a</a></li>
+                        <li><a href="punkty.html#pszok-5"><i class="bi bi-geo-alt"></i> PSZOK Teofilów – Wersalska 47/75</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <div class="subpage-intro">
             <h1><i class="bi bi-search"></i> Wyszukiwarka odpadów</h1>
-            <p>Wpisz nazwę przedmiotu poniżej (np. <em>karton po mleku, paragon, talerz, bateria, obierki</em>), aby błyskawicznie sprawdzić, gdzie go wyrzucić:</p>
-            
+            <p>Wpisz nazwę przedmiotu poniżej (np. <em>karton po mleku, paragon, talerz, bateria, obierki, słoik</em>), aby szybko sprawdzić, gdzie go wyrzucić:</p>
+
             <div class="search-box">
                 <input type="text" id="waste-input" placeholder="Wpisz nazwę odpadu, np. karton po mleku...">
             </div>
+
+            <div class="filtry-kategorii">
+                <button class="filtr-btn aktywny" data-kat="wszystkie" type="button">Wszystkie</button>
+                <button class="filtr-btn" data-kat="zolty" type="button">Metale i tworzywa</button>
+                <button class="filtr-btn" data-kat="niebieski" type="button">Papier</button>
+                <button class="filtr-btn" data-kat="zielony" type="button">Szkło</button>
+                <button class="filtr-btn" data-kat="brazowy" type="button">Bioodpady</button>
+                <button class="filtr-btn" data-kat="czarny" type="button">Zmieszane</button>
+                <button class="filtr-btn" data-kat="pszok" type="button">Punkty PSZOK / Apteki</button>
+            </div>
         </div>
 
-        <!-- Trzy kolumny z listą odpadów filtrowaną na żywo -->
-        <div class="content-blocks" id="waste-results">
-            <section class="kolumna waste-item">
-                <h2>Karton po mleku / soku</h2>
-                <p><strong>Kosz:</strong> Żółty (Metale i tworzywa sztuczne)</p>
-                <p>Opakowania typu Tetra Pak składają się z papieru, folii i aluminium – zgnieć je przed wyrzuceniem.</p>
-            </section>
-
-            <section class="kolumna waste-item">
-                <h2>Paragon ze sklepu</h2>
-                <p><strong>Kosz:</strong> Czarny (Odpady zmieszane)</p>
-                <p>Papier termiczny nie nadaje się do recyklingu makulatury. Nigdy nie wrzucaj go do niebieskiego pojemnika!</p>
-            </section>
-
-            <section class="kolumna waste-item">
-                <h2>Potłuczona szklanka / talerz</h2>
-                <p><strong>Kosz:</strong> Czarny (Odpady zmieszane)</p>
-                <p>Szklanki, kieliszki i ceramika mają inną temperaturę topnienia niż szkło opakowaniowe (słoiki i butelki).</p>
-            </section>
-        </div>
-
-        <div class="content-blocks">
-            <section class="kolumna waste-item">
-                <h2>Zużyte baterie i elektronika</h2>
-                <p><strong>Miejsce:</strong> PSZOK lub pojemnik w sklepie</p>
-                <p>Zawierają metale ciężkie. Oddaj do specjalnego pojemnika w supermarkecie lub Punktu Selektywnej Zbiórki Odpadów.</p>
-            </section>
-
-            <section class="kolumna waste-item">
-                <h2>Przeterminowane leki</h2>
-                <p><strong>Miejsce:</strong> Specjalny pojemnik w aptece</p>
-                <p>Papierowe pudełko i ulotkę wyrzuć do niebieskiego kosza, a blistry z tabletkami lub syrop zanieś do apteki.</p>
-            </section>
-
-            <section class="kolumna waste-item">
-                <h2>Pudełko po pizzy</h2>
-                <p><strong>Kosz:</strong> Czarny (Zmieszane) / Niebieski (Papier)</p>
-                <p>Zatłuszczony spód wrzuć do odpadów zmieszanych. Czystą górną pokrywkę możesz oderwać i wrzucić do papieru.</p>
-            </section>
-        </div>
+        <div class="waste-grid" id="waste-results"></div>
     </main>
 
     <footer>
         <div class="content footer-content">
             <h3>Kontakt</h3>
             <ul>
-                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
-                <li>E-mail: kontakt@ekosort.pl</li>
-                <li>Telefon: +48 42 123 45 67</li>
+                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>
+                    <a href="mailto:kontakt@ekosort.pl?subject=Pytanie%20dotyczace%20segregacji%20odpadow" class="footer-mail-link">
+                        <i class="bi bi-envelope-fill"></i> kontakt@ekosort.pl
+                    </a>
+                </li>
+                <li><i class="bi bi-telephone"></i> Telefon: +48 42 123 45 67</li>
             </ul>
         </div>
         <div class="copyright">
@@ -98,23 +85,167 @@
     </footer>
 
     <script>
-        // Obsługa menu mobilnego (Ćwiczenie 4)
         const hamburger = document.querySelector('#menu-toggle');
         const menu = document.querySelector('.menu');
+        hamburger.addEventListener('click', () => menu.classList.toggle('active'));
 
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-
-        // Filtrowanie odpadów w wyszukiwarce
+        const wasteResults = document.querySelector('#waste-results');
         const searchInput = document.querySelector('#waste-input');
-        const wasteItems = document.querySelectorAll('.waste-item');
+        const filterBtns = document.querySelectorAll('.filtr-btn');
 
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            wasteItems.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(query) ? 'flex' : 'none';
+        // Dane zapasowe na wypadek otwarcia pliku lokalnie z dysku (file://) bez serwera
+        const daneZapasoweOdpady = [
+  {
+    "id": 1,
+    "nazwa": "Karton po mleku lub soku (Tetra Pak)",
+    "kosz": "Żółty pojemnik (Metale i tworzywa sztuczne)",
+    "kategoria": "zolty",
+    "opis": "Opakowania wielomateriałowe składają się z papieru, folii i aluminium – zgnieć je przed wyrzuceniem do żółtego kosza."
+  },
+  {
+    "id": 2,
+    "nazwa": "Paragon ze sklepu",
+    "kosz": "Czarny pojemnik (Odpady zmieszane)",
+    "kategoria": "czarny",
+    "opis": "Papier termiczny nie nadaje się do recyklingu makulatury. Wyrzuć go do czarnego pojemnika na odpady zmieszane."
+  },
+  {
+    "id": 3,
+    "nazwa": "Pudełko po pizzy",
+    "kosz": "Czarny (Zmieszane) / Czysta góra: Niebieski (Papier)",
+    "kategoria": "czarny",
+    "opis": "Zatłuszczony spód wrzuć do odpadów zmieszanych. Czystą górną pokrywkę możesz oderwać i wrzucić do papieru."
+  },
+  {
+    "id": 4,
+    "nazwa": "Potłuczona szklanka, kieliszek lub talerz",
+    "kosz": "Czarny pojemnik (Odpady zmieszane)",
+    "kategoria": "czarny",
+    "opis": "Szkło stołowe, żaroodporne i ceramika mają inną temperaturę topnienia niż słoiki i butelki opakowaniowe."
+  },
+  {
+    "id": 5,
+    "nazwa": "Słoik po dżemie lub butelka szklana",
+    "kosz": "Zielony pojemnik (Szkło)",
+    "kategoria": "zielony",
+    "opis": "Opróżnij z zawartości i odkręć nakrętkę (metalową nakrętkę wrzuć do żółtego kosza). Słoików nie trzeba myć."
+  },
+  {
+    "id": 6,
+    "nazwa": "Butelka plastikowa PET po napoju",
+    "kosz": "Żółty pojemnik (Metale i tworzywa sztuczne)",
+    "kategoria": "zolty",
+    "opis": "Odkręć nakrętkę i zgnieć butelkę przed wyrzuceniem, aby zmniejszyć jej objętość."
+  },
+  {
+    "id": 7,
+    "nazwa": "Puszka aluminiowa lub stalowa po konserwie",
+    "kosz": "Żółty pojemnik (Metale i tworzywa sztuczne)",
+    "kategoria": "zolty",
+    "opis": "Opróżnij puszkę z resztek jedzenia i zgnieć przed wrzuceniem do żółtego pojemnika."
+  },
+  {
+    "id": 8,
+    "nazwa": "Gazety, czasopisma, zeszyty, kartony",
+    "kosz": "Niebieski pojemnik (Papier)",
+    "kategoria": "niebieski",
+    "opis": "Usuń taśmę klejącą i foliowe elementy, a kartony złóż na płasko przed wrzuceniem."
+  },
+  {
+    "id": 9,
+    "nazwa": "Obierki z warzyw i owoców, fusy po kawie",
+    "kosz": "Brązowy pojemnik (Bioodpady)",
+    "kategoria": "brazowy",
+    "opis": "Wrzucaj luzem lub w workach biodegradowalnych – nigdy w zwykłych reklamówkach foliowych."
+  },
+  {
+    "id": 10,
+    "nazwa": "Kości zwierzęce, resztki mięsa, olej jadalny",
+    "kosz": "Czarny pojemnik (Odpady zmieszane)",
+    "kategoria": "czarny",
+    "opis": "Resztki pochodzenia zwierzęcego oraz tłuszcze nie mogą trafiać do brązowego pojemnika BIO."
+  },
+  {
+    "id": 11,
+    "nazwa": "Zużyte baterie, akumulatorki i świetlówki",
+    "kosz": "PSZOK lub pojemnik w sklepie / markecie",
+    "kategoria": "pszok",
+    "opis": "Zawierają metale ciężkie (m.in. ołów, kadm, rtęć). Oddaj do oznakowanego pojemnika w sklepie lub punktu PSZOK."
+  },
+  {
+    "id": 12,
+    "nazwa": "Przeterminowane leki i termometry",
+    "kosz": "Specjalny pojemnik w aptece lub PSZOK",
+    "kategoria": "pszok",
+    "opis": "Kartonik i ulotkę wrzuć do papieru, a blistry z tabletkami lub syropy oddaj do pojemnika w aptece."
+  },
+  {
+    "id": 13,
+    "nazwa": "Stary telefon, ładowarka, drobna elektronika",
+    "kosz": "PSZOK Łódź lub punkt zbiórki elektroodpadów",
+    "kategoria": "pszok",
+    "opis": "Zużyty sprzęt elektroniczny przekaż do punktu PSZOK lub oddaj w markecie elektronicznym."
+  },
+  {
+    "id": 14,
+    "nazwa": "Stare meble, materace, opony, gruz",
+    "kosz": "Punkt Selektywnej Zbiórki Odpadów (PSZOK)",
+    "kategoria": "pszok",
+    "opis": "Odpady wielkogabarytowe i poremontowe mieszkańcy Łodzi mogą bezpłatnie dostarczyć do dowolnego punktu PSZOK."
+  }
+];
+
+        let wszystkieOdpady = [];
+        let aktywnaKategoria = 'wszystkie';
+
+        function wyswietlOdpady() {
+            const fraza = searchInput.value.toLowerCase().trim();
+
+            const przefiltrowane = wszystkieOdpady.filter(item => {
+                const pasujeKategoria = aktywnaKategoria === 'wszystkie' || item.kategoria === aktywnaKategoria;
+                const pasujeTekst = item.nazwa.toLowerCase().includes(fraza) ||
+                                    item.kosz.toLowerCase().includes(fraza) ||
+                                    item.opis.toLowerCase().includes(fraza);
+                return pasujeKategoria && pasujeTekst;
+            });
+
+            if (przefiltrowane.length === 0) {
+                wasteResults.innerHTML = '<section class="kolumna"><p>Nie znaleziono odpadu pasującego do wpisanej frazy.</p></section>';
+                return;
+            }
+
+            wasteResults.innerHTML = przefiltrowane.map(item => `
+                <section class="kolumna kategoria-${item.kategoria}">
+                    <h2>${item.nazwa}</h2>
+                    <p><strong>Gdzie wyrzucić:</strong> ${item.kosz}</p>
+                    <p>${item.opis}</p>
+                </section>
+            `).join('');
+        }
+
+        // Wczytanie danych za pomocą fetch() z pliku JSON (z automatycznym fallbackiem dla trybu offline)
+        fetch("assets/data/odpady.json")
+            .then(response => {
+                if (!response.ok) throw new Error("Błąd HTTP");
+                return response.json();
+            })
+            .then(odpady => {
+                wszystkieOdpady = odpady;
+                wyswietlOdpady();
+            })
+            .catch(() => {
+                wszystkieOdpady = daneZapasoweOdpady;
+                wyswietlOdpady();
+            });
+
+        searchInput.addEventListener('input', wyswietlOdpady);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('aktywny'));
+                btn.classList.add('aktywny');
+                aktywnaKategoria = btn.getAttribute('data-kat');
+                wyswietlOdpady();
             });
         });
     </script>

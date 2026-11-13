@@ -1,281 +1,369 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Punkty zbiórki (PSZOK) - EkoSort</title>
-
     <meta name="author" content="Dominik Ciekański">
-    <meta name="description" content="Sprawdź adresy i godziny otwarcia Punktów Selektywnej Zbiórki Odpadów Komunalnych (PSZOK) w Łodzi.">
-    <meta name="keywords" content="PSZOK, punkty zbiórki, Łódź, gabaryty, elektrośmieci">
-
+    <meta name="description" content="Sprawdź adresy, mapę i godziny otwarcia Punktów Selektywnej Zbiórki Odpadów Komunalnych (PSZOK) w Łodzi.">
+    <meta name="keywords" content="PSZOK, punkty zbiórki, Łódź, gabaryty, elektrośmieci, mapa">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="punkty-page">
-
     <header>
         <div class="content">
             <a href="index.html" class="logo">EkoSort ♻️</a>
-            <p class="slogan">
-                Segreguj mądrze! Twój przewodnik po świecie recyklingu.
-            </p>
+            <p class="slogan">Segreguj mądrze! Twój przewodnik po świecie recyklingu.</p>
         </div>
     </header>
 
-    <button id="menu-toggle" aria-label="Otwórz menu" aria-expanded="false">
-        <i class="bi bi-list"></i>
-    </button>
+    <div class="sticky-nav-wrapper">
+        <button id="menu-toggle" aria-label="Otwórz menu" aria-expanded="false">
+            <i class="bi bi-list"></i> Menu
+        </button>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="segregacja.html">Zasady segregacji</a></li>
-            <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
-            <li><a href="punkty.html" class="active-page">Punkty zbiórki</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="segregacja.html">Zasady segregacji</a></li>
+                <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
+                <li><a href="gdzie-wyrzucic.html">Odpady problemowe i kalkulator</a></li>
+                <li class="dropdown">
+                    <a href="punkty.html" class="active-page">Punkty PSZOK w Łodzi</a>
+                    <ul class="submenu">
+                        <li><a href="#pszok-1"><i class="bi bi-geo-alt"></i> PSZOK Bałuty – Kasprowicza 10</a></li>
+                        <li><a href="#pszok-2"><i class="bi bi-geo-alt"></i> PSZOK Górna – Graniczna 2</a></li>
+                        <li><a href="#pszok-3"><i class="bi bi-geo-alt"></i> PSZOK Dąbrowa – Zamiejska 1</a></li>
+                        <li><a href="#pszok-4"><i class="bi bi-geo-alt"></i> PSZOK Polesie – Związkowa 2a</a></li>
+                        <li><a href="#pszok-5"><i class="bi bi-geo-alt"></i> PSZOK Teofilów – Wersalska 47/75</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
-
         <div class="subpage-intro">
-            <h1>
-                <i class="bi bi-geo-alt"></i>
-                Punkty Selektywnej Zbiórki Odpadów (PSZOK)
-            </h1>
-
-            <p>
-                Do punktów PSZOK mieszkańcy mogą bezpłatnie oddać
-                odpady problemowe: stare meble (gabaryty), zużyty sprzęt
-                RTV/AGD, opony, gruz poremontowy, farby oraz chemikalia.
-            </p>
+            <h1><i class="bi bi-geo-alt"></i> Punkty Selektywnej Zbiórki Odpadów Komunalnych (PSZOK) w Łodzi</h1>
+            <p>Do punktów PSZOK mieszkańcy Łodzi mogą bezpłatnie oddać odpady problemowe z gospodarstw domowych: stare meble (gabaryty), zużyty sprzęt RTV/AGD, opony, gruz poremontowy, świetlówki oraz baterie.</p>
         </div>
 
-        <!-- PUNKTY PSZOK -->
-
-        <div class="content-blocks">
-
-            <section class="kolumna">
-
-                <h2>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    PSZOK Łódź – Bałuty
-                </h2>
-
-                <p>
-                    <strong>Adres:</strong>
-                    ul. Kasprowicza 10, 91-212 Łódź
-                </p>
-
-                <p>
-                    <strong>Godziny otwarcia:</strong>
-                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
-                </p>
-
-                <p>
-                    <strong>Przyjmowane odpady:</strong>
-                    elektrośmieci, baterie, świetlówki, farby,
-                    odpady wielkogabarytowe, odpady budowlane,
-                    opony i tekstylia.
-                </p>
-
-                <a class="btn-more"
-                   href="https://www.google.com/maps/search/?api=1&query=ul.+Kasprowicza+10+Łódź"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="bi bi-map"></i> Pokaż na mapie
-                </a>
-
-            </section>
-
-            <section class="kolumna">
-
-                <h2>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    PSZOK Łódź – Widzew
-                </h2>
-
-                <p>
-                    <strong>Adres:</strong>
-                    ul. Graniczna 2, 93-428 Łódź
-                </p>
-
-                <p>
-                    <strong>Godziny otwarcia:</strong>
-                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
-                </p>
-
-                <p>
-                    <strong>Przyjmowane odpady:</strong>
-                    zużyty sprzęt RTV/AGD, baterie,
-                    chemikalia, meble, odpady budowlane,
-                    opony i tekstylia.
-                </p>
-
-                <a class="btn-more"
-                   href="https://www.google.com/maps/search/?api=1&query=ul.+Graniczna+2+Łódź"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="bi bi-map"></i> Pokaż na mapie
-                </a>
-
-            </section>
-
-            <section class="kolumna">
-
-                <h2>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    PSZOK Łódź – Polesie
-                </h2>
-
-                <p>
-                    <strong>Adres:</strong>
-                    ul. Zamiejska 1, 94-112 Łódź
-                </p>
-
-                <p>
-                    <strong>Godziny otwarcia:</strong>
-                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
-                </p>
-
-                <p>
-                    <strong>Przyjmowane odpady:</strong>
-                    sprzęt elektryczny i elektroniczny,
-                    meble, odpady wielkogabarytowe,
-                    odpady budowlane, opony,
-                    baterie i chemikalia.
-                </p>
-
-                <a class="btn-more"
-                   href="https://www.google.com/maps/search/?api=1&query=ul.+Zamiejska+1+Łódź"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="bi bi-map"></i> Pokaż na mapie
-                </a>
-
-            </section>
-
-            <section class="kolumna">
-
-                <h2>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    PSZOK Łódź – Wersalska
-                </h2>
-
-                <p>
-                    <strong>Adres:</strong>
-                    ul. Wersalska 39, Łódź
-                </p>
-
-                <p>
-                    <strong>Godziny otwarcia:</strong>
-                    Pon–Pt: 7:00–19:30, Sob: 7:00–14:30
-                </p>
-
-                <p>
-                    <strong>Przyjmowane odpady:</strong>
-                    odpady problemowe z gospodarstw domowych,
-                    elektrośmieci, odpady wielkogabarytowe,
-                    odpady budowlane i opony.
-                </p>
-
-                <a class="btn-more"
-                   href="https://www.google.com/maps/search/?api=1&query=ul.+Wersalska+39+Łódź"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="bi bi-map"></i> Pokaż na mapie
-                </a>
-
-            </section>
-
-        </div>
-
-        <!-- MAPA GOOGLE -->
-
-        <section class="map-section">
-
-            <h2>
-                <i class="bi bi-map"></i>
-                Mapa punktów PSZOK w Łodzi
-            </h2>
-
-            <p>
-                Sprawdź lokalizację punktów zbiórki odpadów
-                i wybierz najbliższy punkt.
-            </p>
-
-            <div class="map-container">
-
-                <iframe
-                    src="https://www.google.com/maps?q=ul.+Kasprowicza+10,+Łódź|ul.+Graniczna+2,+Łódź|ul.+Zamiejska+1,+Łódź|ul.+Wersalska+39,+Łódź&output=embed"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Mapa punktów PSZOK w Łodzi">
-                </iframe>
-
+        <!-- Interaktywny panel: Mapa Google + Lista punktów i warunki pogodowe -->
+        <section class="pszok-panel">
+            <div>
+                <h2><i class="bi bi-map"></i> Lokalizacja punktu na mapie Google</h2>
+                <p style="margin-bottom: 10px;">Wybierz punkt z listy obok lub kliknij przycisk „Pokaż na mapie” poniżej, aby przybliżyć wybraną lokalizację:</p>
+                <div class="map-container">
+                    <iframe
+                        id="google-map-frame"
+                        src="https://www.google.com/maps?q=PSZOK+ul.+Jana+Kasprowicza+10+Łódź&output=embed"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa punktów PSZOK w Łodzi">
+                    </iframe>
+                </div>
             </div>
 
-            <p class="map-note">
-                Aby zobaczyć dokładną lokalizację konkretnego punktu,
-                skorzystaj z przycisku „Pokaż na mapie” przy jego adresie.
-            </p>
+            <div>
+                <h2><i class="bi bi-list-check"></i> Wybierz punkt zbiórki w Łodzi</h2>
+                <p>Kliknij w nazwę punktu, aby wyświetlić szczegóły na mapie oraz aktualne warunki pogodowe:</p>
 
+                <ul id="listaParkow"></ul>
+
+                <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <button id="przewinDol" class="btn-more" type="button">Przewiń na dół</button>
+                    <button id="przewinGore" class="btn-more" type="button">Przewiń na górę</button>
+                </div>
+
+                <div id="pogoda">
+                    <p>Wybierz punkt z listy powyżej, aby zobaczyć szczegółowe informacje.</p>
+                </div>
+            </div>
         </section>
 
+        <!-- Karty poszczególnych punktów PSZOK w Łodzi -->
+        <div class="content-blocks">
+            <section class="kolumna" id="pszok-1">
+                <h2><i class="bi bi-geo-alt-fill"></i> PSZOK Łódź – Bałuty</h2>
+                <p><strong>Adres:</strong> ul. Jana Kasprowicza 10, 91-212 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–20:00, Sob: 8:00–16:00</p>
+                <p><strong>Przyjmowane odpady:</strong> elektrośmieci, baterie, świetlówki, farby, odpady wielkogabarytowe, odpady budowlane, opony i tekstylia.</p>
+                <button class="btn-more pokaz-na-mapie-btn" data-id="1" type="button">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </button>
+            </section>
+
+            <section class="kolumna" id="pszok-2">
+                <h2><i class="bi bi-geo-alt-fill"></i> PSZOK Łódź – Górna (Chojny)</h2>
+                <p><strong>Adres:</strong> ul. Graniczna 2, 93-428 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–20:00, Sob: 8:00–16:00</p>
+                <p><strong>Przyjmowane odpady:</strong> zużyty sprzęt RTV/AGD, baterie, chemikalia, meble, odpady budowlane, opony i odpady zielone.</p>
+                <button class="btn-more pokaz-na-mapie-btn" data-id="2" type="button">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </button>
+            </section>
+
+            <section class="kolumna" id="pszok-3">
+                <h2><i class="bi bi-geo-alt-fill"></i> PSZOK Łódź – Dąbrowa</h2>
+                <p><strong>Adres:</strong> ul. Zamiejska 1, 93-379 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–20:00, Sob: 8:00–16:00</p>
+                <p><strong>Przyjmowane odpady:</strong> sprzęt elektryczny i elektroniczny, meble, odpady wielkogabarytowe, gruz budowlany, opony i baterie.</p>
+                <button class="btn-more pokaz-na-mapie-btn" data-id="3" type="button">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </button>
+            </section>
+
+            <section class="kolumna" id="pszok-4">
+                <h2><i class="bi bi-geo-alt-fill"></i> PSZOK Łódź – Polesie</h2>
+                <p><strong>Adres:</strong> ul. Związkowa 2a, 94-127 Łódź</p>
+                <p><strong>Godziny otwarcia:</strong> Pon–Pt: 8:00–20:00, Sob: 8:00–16:00</p>
+                <p><strong>Przyjmowane odpady:</strong> baterie i akumulatory, świetlówki, przeterminowane leki, elektroodpady, meble, opony i gruz.</p>
+                <button class="btn-more pokaz-na-mapie-btn" data-id="4" type="button">
+                    <i class="bi bi-map"></i> Pokaż na mapie
+                </button>
+            </section>
+        </div>
     </main>
 
     <footer>
-
         <div class="content footer-content">
-
             <h3>Kontakt</h3>
-
             <ul>
-                <li>Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
-                <li>E-mail: kontakt@ekosort.pl</li>
-                <li>Telefon: +48 42 123 45 67</li>
+                <li><i class="bi bi-geo-alt"></i> Adres: ul. Ekologiczna 5, 90-000 Łódź</li>
+                <li>
+                    <a href="mailto:kontakt@ekosort.pl?subject=Pytanie%20dotyczace%20PSZOK%20w%20Lodzi" class="footer-mail-link">
+                        <i class="bi bi-envelope-fill"></i> kontakt@ekosort.pl
+                    </a>
+                </li>
+                <li><i class="bi bi-telephone"></i> Telefon: +48 42 123 45 67</li>
             </ul>
-
         </div>
-
         <div class="copyright">
-            <p>
-                &#169; 2026 EkoSort. Wszelkie prawa zastrzeżone.
-                Autor: Dominik Ciekański.
-            </p>
+            <p>&#169; 2026 EkoSort. Wszelkie prawa zastrzeżone. Autor: Dominik Ciekański.</p>
         </div>
-
     </footer>
-
-    <!-- JAVASCRIPT MENU -->
 
     <script>
         const hamburger = document.querySelector('#menu-toggle');
         const menu = document.querySelector('.menu');
 
         hamburger.addEventListener('click', () => {
-
             const otwarte = menu.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', String(otwarte));
+        });
 
-            hamburger.setAttribute(
-                'aria-expanded',
-                String(otwarte)
-            );
+        // Elementy DOM (Ćwiczenie 7)
+        const listaParkow = document.querySelector("#listaParkow");
+        const pogoda = document.querySelector("#pogoda");
+        const mapaFrame = document.querySelector("#google-map-frame");
 
-            hamburger.setAttribute(
-                'aria-label',
-                otwarte ? 'Zamknij menu' : 'Otwórz menu'
-            );
+        // Dane zapasowe na wypadek otwarcia pliku bezpośrednio z dysku (file://)
+        const daneZapasowePszok = [
+  {
+    "id": 1,
+    "nazwa": "PSZOK Łódź – Bałuty (ul. Kasprowicza 10)",
+    "wojewodztwo": "łódzkie",
+    "siedziba": "Łódź-Bałuty (Żabieniec)",
+    "adres": "ul. Jana Kasprowicza 10, 91-212 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "Sprzęt RTV/AGD, meble, opony, gruz budowlany, odpady zielone, farby, świetlówki oraz baterie.",
+    "lat": 51.8016,
+    "lon": 19.3995,
+    "mapQuery": "PSZOK+ul.+Jana+Kasprowicza+10+Łódź"
+  },
+  {
+    "id": 2,
+    "nazwa": "PSZOK Łódź – Górna (ul. Graniczna 2)",
+    "wojewodztwo": "łódzkie",
+    "siedziba": "Łódź-Górna (Chojny)",
+    "adres": "ul. Graniczna 2, 93-428 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "Odpady wielkogabarytowe, elektrośmieci, gruz poremontowy, opony, tekstylia, chemikalia i akumulatory.",
+    "lat": 51.7161,
+    "lon": 19.4398,
+    "mapQuery": "PSZOK+ul.+Graniczna+2+Łódź"
+  },
+  {
+    "id": 3,
+    "nazwa": "PSZOK Łódź – Dąbrowa (ul. Zamiejska 1)",
+    "wojewodztwo": "łódzkie",
+    "siedziba": "Łódź-Górna (Dąbrowa)",
+    "adres": "ul. Zamiejska 1, 93-379 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "Zużyty sprzęt elektryczny i elektroniczny, stare meble, odpady rozbiórkowe, opony, szkło płaskie i baterie.",
+    "lat": 51.7258,
+    "lon": 19.4939,
+    "mapQuery": "PSZOK+ul.+Zamiejska+1+Łódź"
+  },
+  {
+    "id": 4,
+    "nazwa": "PSZOK Łódź – Polesie (ul. Związkowa 2a)",
+    "wojewodztwo": "łódzkie",
+    "siedziba": "Łódź-Polesie (Karolew / Retkinia)",
+    "adres": "ul. Związkowa 2a, 94-127 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "Gabaryty, sprzęt AGD/RTV, opony, odpady zielone, gruz, przeterminowane leki, świetlówki i chemikalia.",
+    "lat": 51.7513,
+    "lon": 19.3976,
+    "mapQuery": "PSZOK+ul.+Związkowa+2a+Łódź"
+  },
+  {
+    "id": 5,
+    "nazwa": "PSZOK Łódź – Teofilów (ul. Wersalska 47/75)",
+    "wojewodztwo": "łódzkie",
+    "siedziba": "Łódź-Bałuty (Teofilów Przemysłowy)",
+    "adres": "ul. Wersalska 47/75, 91-203 Łódź",
+    "godziny": "Pon–Pt: 7:00–19:30, Sob: 7:00–14:30",
+    "przyjmuje": "Odpady problemowe z gospodarstw domowych, elektrośmieci, odpady wielkogabarytowe, gruz i opony.",
+    "lat": 51.7972,
+    "lon": 19.3879,
+    "mapQuery": "ul.+Wersalska+47/75+Łódź"
+  }
+];
+        let listaPunktow = [];
 
+        document.querySelector("#przewinDol").addEventListener("click", () => {
+            listaParkow.scrollBy({ top: 100, behavior: "smooth" });
+        });
+
+        document.querySelector("#przewinGore").addEventListener("click", () => {
+            listaParkow.scrollBy({ top: -100, behavior: "smooth" });
+        });
+
+        function formatujDzien(dataISO) {
+            const dni = [
+                "Niedziela",
+                "Poniedziałek",
+                "Wtorek",
+                "Środa",
+                "Czwartek",
+                "Piątek",
+                "Sobota"
+            ];
+            const dataObj = new Date(dataISO);
+            return `${dni[dataObj.getDay()]} (${dataObj.toLocaleDateString("pl-PL")})`;
+        }
+
+        function wybierzPunktPszok(park, liElement) {
+            document.querySelectorAll("#listaParkow li").forEach(el => {
+                el.classList.remove("wybrany");
+            });
+            if (liElement) {
+                liElement.classList.add("wybrany");
+            }
+
+            // Aktualizacja mapy Google dla wybranego punktu PSZOK
+            const zapytanie = park.mapQuery || encodeURIComponent(park.adres);
+            mapaFrame.src = `https://www.google.com/maps?q=${zapytanie}&output=embed`;
+
+            pogoda.innerHTML = "<p>Ładowanie danych...</p>";
+
+            fetch(`https://api.open-meteo.com/v1/forecast?latitude=${park.lat}&longitude=${park.lon}&current=temperature_2m,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&forecast_days=3&timezone=auto`)
+                .then(response => response.json())
+                .then(data => {
+                    pogoda.innerHTML = `
+                        <h3>${park.nazwa}</h3>
+                        <p><strong>Województwo:</strong> ${park.wojewodztwo}</p>
+                        <p><strong>Siedziba:</strong> ${park.siedziba}</p>
+                        <p><strong>Adres:</strong> ${park.adres}</p>
+                        <p><strong>Godziny otwarcia:</strong> ${park.godziny}</p>
+                        <hr style="margin: 10px 0;">
+                        <h4>Aktualna pogoda</h4>
+                        <p><strong>Temperatura:</strong> ${data.current.temperature_2m} °C</p>
+                        <p><strong>Prędkość wiatru:</strong> ${data.current.wind_speed_10m} km/h</p>
+                        <hr style="margin: 10px 0;">
+                        <h4>Prognoza na 3 dni</h4>
+                        <table>
+                            <tr>
+                                <th>Data</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                                <th>Opady</th>
+                            </tr>
+                            <tr>
+                                <td>${formatujDzien(data.daily.time[0])}</td>
+                                <td>${data.daily.temperature_2m_min[0]} °C</td>
+                                <td>${data.daily.temperature_2m_max[0]} °C</td>
+                                <td>${data.daily.precipitation_sum[0]} mm</td>
+                            </tr>
+                            <tr>
+                                <td>${formatujDzien(data.daily.time[1])}</td>
+                                <td>${data.daily.temperature_2m_min[1]} °C</td>
+                                <td>${data.daily.temperature_2m_max[1]} °C</td>
+                                <td>${data.daily.precipitation_sum[1]} mm</td>
+                            </tr>
+                            <tr>
+                                <td>${formatujDzien(data.daily.time[2])}</td>
+                                <td>${data.daily.temperature_2m_min[2]} °C</td>
+                                <td>${data.daily.temperature_2m_max[2]} °C</td>
+                                <td>${data.daily.precipitation_sum[2]} mm</td>
+                            </tr>
+                        </table>
+                    `;
+                })
+                .catch(error => {
+                    console.error(error);
+                    pogoda.innerHTML = `
+                        <h3>${park.nazwa}</h3>
+                        <p><strong>Województwo:</strong> ${park.wojewodztwo}</p>
+                        <p><strong>Siedziba:</strong> ${park.siedziba}</p>
+                        <p><strong>Adres:</strong> ${park.adres}</p>
+                        <p><strong>Godziny otwarcia:</strong> ${park.godziny}</p>
+                        <p style="margin-top:8px;">Nie udało się pobrać danych pogodowych (sprawdź połączenie z internetem).</p>
+                    `;
+                });
+        }
+
+        function zbudujListePunktow(parki) {
+            listaPunktow = parki;
+            listaParkow.innerHTML = "";
+
+            parki.forEach((park, idx) => {
+                const li = document.createElement("li");
+                li.textContent = park.nazwa;
+                li.style.cursor = "pointer";
+                li.dataset.id = park.id;
+
+                li.addEventListener("click", () => {
+                    wybierzPunktPszok(park, li);
+                });
+
+                listaParkow.appendChild(li);
+
+                if (idx === 0) {
+                    wybierzPunktPszok(park, li);
+                }
+            });
+        }
+
+        // Wczytanie punktów z pliku JSON (oraz fallback dla otwarcia lokalnego file://)
+        fetch("assets/data/pszok.json")
+            .then(response => {
+                if (!response.ok) throw new Error("Błąd HTTP");
+                return response.json();
+            })
+            .then(parki => {
+                console.log(parki);
+                zbudujListePunktow(parki);
+            })
+            .catch(() => {
+                zbudujListePunktow(daneZapasowePszok);
+            });
+
+        // Obsługa przycisków "Pokaż na mapie" na kartach poniżej
+        document.querySelectorAll(".pokaz-na-mapie-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const id = Number(btn.getAttribute("data-id"));
+                const znaleziony = listaPunktow.find(p => p.id === id);
+                const elementLi = document.querySelector(`#listaParkow li[data-id="${id}"]`);
+                if (znaleziony) {
+                    wybierzPunktPszok(znaleziony, elementLi);
+                    document.querySelector(".pszok-panel").scrollIntoView({ behavior: "smooth" });
+                }
+            });
         });
     </script>
-
 </body>
 </html>
-
-
-
