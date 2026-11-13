@@ -123,8 +123,8 @@ nav a.active-page {
     background-color: #2e7d32;
 }
 
-/* Pseudoelement ::after - animowane podkreślenie linków w menu */
-.menu > li:not(.dropdown) > a::after {
+/* Pseudoelement ::after - animowane podkreślenie odnośników w menu (Ćwiczenie 6) */
+.menu > li > a::after {
     content: "";
     position: absolute;
     left: 20%;
@@ -135,75 +135,26 @@ nav a.active-page {
     transition: width 0.3s ease;
 }
 
-.menu > li:not(.dropdown) > a:hover::after,
-.menu > li:not(.dropdown) > a.active-page::after {
+.menu > li > a:hover::after,
+.menu > li > a.active-page::after {
     width: 60%;
-}
-
-/* Pseudoelement ::after - strzałka przy rozwijanym menu */
-.dropdown > a::after {
-    content: "▾";
-    padding-left: 8px;
-    font-size: 0.85em;
-    position: relative;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.dropdown:hover > a::after {
-    transform: rotate(180deg);
-}
-
-.submenu {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 240px;
-    background-color: #144718;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
-    border-radius: 0 0 8px 8px;
-    display: none;
-    flex-direction: column;
-    z-index: 1100;
-    overflow: hidden;
-}
-
-.dropdown:hover .submenu {
-    display: flex;
-}
-
-.submenu li {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.submenu li a {
-    padding: 11px 16px;
-    font-size: 0.92rem;
-    font-weight: normal;
-    text-align: left;
 }
 
 @media (hover: hover) {
     .menu > li > a:hover {
         background-color: #388e3c;
-    }
-    .submenu li a:hover {
-        background-color: #2e7d32;
-        padding-left: 20px;
+        transform: scale(1.03);
     }
 }
 
-/* 5. SUBTELNE PSEUDOELEMENTY W TEKŚCIE (::before i ::after) */
+/* 5. PSEUDOELEMENTY W TEKŚCIE I LISTACH (::before i ::after - Ćwiczenie 6) */
 .termin {
     font-weight: 600;
     color: #1b5e20;
 }
 
 .termin::before {
-    content: "• ";
-    color: #2e7d32;
+    content: "🌿 ";
 }
 
 .termin::after {
@@ -217,16 +168,14 @@ nav a.active-page {
 
 .eko-lista li {
     position: relative;
-    padding-left: 26px;
+    padding-left: 28px;
     margin-bottom: 8px;
 }
 
 .eko-lista li::before {
-    content: "✔";
-    color: #2e7d32;
-    font-weight: bold;
+    content: "♻️";
     position: absolute;
-    left: 4px;
+    left: 0;
     top: 0;
 }
 
@@ -309,7 +258,7 @@ main {
     transform: translateY(-2px);
 }
 
-/* 7. GALERIA NAJCZĘSTSZYCH BŁĘDÓW SEGREGACJI (Płynna ciągła animacja) */
+/* 7. GALERIA ŹLE WYRZUCANYCH ODPADÓW (Ćwiczenie 6: overflow + animacja CSS) */
 .sekcja-galerii {
     background-color: #ecf0f1;
     padding: 22px;
@@ -327,7 +276,7 @@ main {
 .galeria {
     overflow: hidden;
     width: 100%;
-    border: 1px solid #cfd8dc;
+    border: 2px solid #cfd8dc;
     border-radius: 8px;
     background-color: #ffffff;
     padding: 16px 0;
@@ -339,12 +288,11 @@ main {
     gap: 20px;
     width: max-content;
     padding: 0 16px;
-    animation: przesuwanie 22s linear infinite;
+    animation: przesuwanie 20s linear infinite;
 }
 
-/* Przyspieszanie po najechaniu kursorem */
 .tor:hover {
-    animation-duration: 8s;
+    animation-duration: 7s;
 }
 
 .karta-galerii {
@@ -358,32 +306,16 @@ main {
 }
 
 .karta-galerii:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.04);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
 }
 
-.placeholder-foto {
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(135deg, #e2ece4 0%, #d4e3d7 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #1b5e20;
-    border-bottom: 1px solid #c8d8cb;
-    padding: 10px;
-    text-align: center;
-}
-
-.placeholder-foto i {
-    font-size: 2.4rem;
-    margin-bottom: 4px;
-}
-
-.placeholder-foto span {
-    font-size: 0.8rem;
-    color: #455a64;
+.tor img {
+    width: 260px;
+    height: 155px;
+    object-fit: cover;
+    display: block;
+    background-color: #e4eee6;
 }
 
 .karta-galerii-opis {
@@ -393,7 +325,7 @@ main {
 .karta-galerii-opis h3 {
     font-size: 1rem;
     color: #1b5e20;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .karta-galerii-opis p {
@@ -410,7 +342,7 @@ main {
     }
 }
 
-/* 8. FORMULARZE I JEDEN KALKULATOR (Idealnie równe pola) */
+/* 8. FORMULARZ I JEDEN KALKULATOR (Równe pola w jednej linii) */
 .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -470,7 +402,7 @@ main {
     border-radius: 6px;
 }
 
-/* 9. PODSTRONY I KARTY POJEMNIKÓW */
+/* 9. PODSTRONY I KOLORY POJEMNIKÓW */
 .subpage-intro {
     background-color: #ecf0f1;
     padding: 20px;
@@ -536,57 +468,56 @@ main {
     gap: 20px;
 }
 
-/* 10. PUNKTY PSZOK, LISTA, POGODA I MAPA GOOGLE */
-.punkty-page .content-blocks {
+/* 10. ZMODERNIZOWANA PODSTRONA PUNKTY.HTML (Lista + Mapa + Karta podjeżdżająca pod mapę) */
+.pszok-modern-layout {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(1rem, 2vw, 2rem);
-    width: 100%;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+    align-items: start;
 }
 
-.pszok-panel {
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 24px;
+.pszok-sidebar {
     background-color: #ecf0f1;
     padding: 22px;
-    border-radius: 8px;
+    border-radius: 10px;
     border-top: 4px solid #2e7d32;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.map-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-    border: 2px solid #ffffff;
-    background-color: #e0e0e0;
+.pszok-sidebar h2 {
+    color: #1b5e20;
+    font-size: 1.3rem;
 }
 
-.map-container iframe {
-    display: block;
-    width: 100%;
-    height: 430px;
-    border: none;
+.pszok-hint {
+    font-size: 0.9rem;
+    color: #455a64;
 }
 
 #listaParkow {
     list-style: none;
-    max-height: 210px;
-    overflow-y: auto;
     background-color: #ffffff;
     border: 1px solid #cfd8dc;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 8px;
-    margin: 10px 0;
+    margin: 4px 0;
 }
 
 #listaParkow li {
-    padding: 9px 12px;
-    border-radius: 5px;
-    transition: 0.25s;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 11px 12px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid #f0f2f0;
     margin-bottom: 4px;
+    font-size: 0.95rem;
+}
+
+#listaParkow li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
 }
 
 #listaParkow li::before {
@@ -595,38 +526,182 @@ main {
 
 #listaParkow li:hover {
     background-color: #dcefdc;
+    padding-left: 16px;
 }
 
 .wybrany {
     background-color: darkgreen !important;
     color: white !important;
     font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 100, 0, 0.25);
 }
 
-#pogoda {
-    background-color: #ffffff;
-    border: 1px solid #cfd8dc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 12px;
+.pszok-nav-buttons {
+    display: flex;
+    gap: 10px;
 }
 
-#pogoda table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-#pogoda th,
-#pogoda td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
+.pszok-nav-buttons .btn-more {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 12px;
     font-size: 0.9rem;
 }
 
-#pogoda th {
+.pszok-zasady-box {
+    margin-top: 8px;
+    background-color: #ffffff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #2e7d32;
+    font-size: 0.9rem;
+}
+
+.pszok-zasady-box h3 {
+    font-size: 1rem;
+    color: #1b5e20;
+    margin-bottom: 6px;
+}
+
+.pszok-map-and-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.map-box {
     background-color: #ecf0f1;
+    padding: 16px;
+    border-radius: 10px;
+    border-top: 4px solid #2e7d32;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.map-header-bar {
+    font-weight: bold;
+    color: #1b5e20;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffffff;
+    background-color: #e0e0e0;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: none;
+}
+
+/* Karta wybranego PSZOK-u podjeżdżająca bezpośrednio pod mapę */
+.pszok-active-card {
+    background-color: #ffffff;
+    border: 2px solid #2e7d32;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 6px 18px rgba(27, 94, 32, 0.12);
+}
+
+.animuj-podjazd {
+    animation: podjedzPodMape 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes podjedzPodMape {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pszok-active-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e0e6e0;
+    margin-bottom: 14px;
+}
+
+.pszok-badge {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+}
+
+.pszok-active-header h3 {
+    color: #1b5e20;
+    font-size: 1.35rem;
+}
+
+.pszok-active-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.pszok-info-item {
+    background-color: #f8faf8;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #e2ebe2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pszok-info-item strong {
+    color: #1b5e20;
+    font-size: 0.88rem;
+}
+
+.pszok-info-full {
+    grid-column: 1 / -1;
+}
+
+.pszok-overview-section {
+    margin-top: 8px;
+}
+
+.overview-title {
+    color: #1b5e20;
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+}
+
+.punkty-page .content-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.karta-pszok-item {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.karta-pszok-item.aktywna-karta-pszok {
+    border-top-color: darkgreen;
+    background-color: #e8f5e9;
+    box-shadow: 0 4px 12px rgba(27, 94, 32, 0.15);
 }
 
 /* 11. INTERAKTYWNA STOPKA */
@@ -693,8 +768,8 @@ footer .copyright {
 }
 
 /* 12. RESPONSYWNOŚĆ */
-@media (max-width: 900px) {
-    .pszok-panel {
+@media (max-width: 960px) {
+    .pszok-modern-layout {
         grid-template-columns: 1fr;
     }
 }
@@ -734,16 +809,6 @@ footer .copyright {
         padding: 18px;
     }
 
-    .submenu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .submenu li a {
-        text-align: center;
-    }
-
     .logo {
         font-size: 2rem;
     }
@@ -753,7 +818,7 @@ footer .copyright {
     }
 
     .map-container iframe {
-        height: 330px;
+        height: 300px;
     }
 
     footer .content ul {
