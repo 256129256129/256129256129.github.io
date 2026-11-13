@@ -826,3 +826,6 @@ footer .copyright {
         gap: 8px;
     }
 }
+
+/* Blokada wyświetlania starego submenu */
+.submenu { display: none !important; }

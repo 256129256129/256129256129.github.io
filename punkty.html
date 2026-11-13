@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punkty zbiórki (PSZOK) - EkoSort</title>
+    <title>Punkty PSZOK w Łodzi - EkoSort</title>
     <meta name="author" content="Dominik Ciekański">
     <meta name="description" content="Sprawdź adresy, mapę i godziny otwarcia Punktów Selektywnej Zbiórki Odpadów Komunalnych (PSZOK) w Łodzi.">
     <meta name="keywords" content="PSZOK, punkty zbiórki, Łódź, gabaryty, elektrośmieci, mapa">
@@ -29,7 +29,7 @@
                 <li><a href="segregacja.html">Zasady segregacji</a></li>
                 <li><a href="wyszukiwarka.html">Wyszukiwarka odpadów</a></li>
                 <li><a href="gdzie-wyrzucic.html">Odpady problemowe i kalkulator</a></li>
-                <li><a href="punkty.html" class="active-page">Punkty zbiórki</a></li>
+                <li><a href="punkty.html" class="active-page">Punkty PSZOK w Łodzi</a></li>
             </ul>
         </nav>
     </div>
@@ -40,7 +40,7 @@
             <p>Wybierz punkt z listy lub użyj przycisków przełączania, aby wyświetlić lokalizację na mapie Google oraz szczegółowe informacje bezpośrednio pod mapą.</p>
         </div>
 
-        <!-- Zmodernizowany układ: Lista ze sterowaniem po lewej + Mapa i podjeżdżająca karta szczegółów po prawej -->
+        <!-- Układ: Lista ze sterowaniem po lewej + Mapa i podjeżdżająca karta szczegółów po prawej -->
         <section class="pszok-modern-layout" id="sekcja-mapy">
             <!-- Lewy panel: Lista punktów PSZOK + przyciski przesuwające zielone zaznaczenie -->
             <aside class="pszok-sidebar">
@@ -77,7 +77,7 @@
                     <div class="map-container">
                         <iframe
                             id="google-map-frame"
-                            src="https://www.google.com/maps?q=PSZOK+ul.+Jana+Kasprowicza+10+Łódź&output=embed"
+                            src="https://www.google.com/maps?q=ul.+Jana+Kasprowicza+10,+91-212+Łódź&output=embed"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
@@ -86,18 +86,8 @@
                     </div>
                 </div>
 
-                <!-- Karta szczegółów wybranego PSZOK-u, która animuje się (podjeżdża) bezpośrednio pod mapę -->
-                <div id="kartaPodMapa" class="pszok-active-card">
-                    <!-- Wypełniane dynamicznie po wybraniu punktu -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Szybki przegląd wszystkich punktów z przyciskami "Pokaż na mapie" -->
-        <section class="pszok-overview-section">
-            <h2 class="overview-title">🏢 Wszystkie punkty PSZOK w Łodzi – szybki podgląd</h2>
-            <div class="content-blocks" id="kartyWszystkichPszok">
-                <!-- Generowane dynamicznie i połączone z mapą oraz listą powyżej -->
+                <!-- Karta szczegółów wybranego PSZOK-u podjeżdżająca bezpośrednio pod mapę -->
+                <div id="kartaPodMapa" class="pszok-active-card"></div>
             </div>
         </section>
     </main>
@@ -121,7 +111,6 @@
     </footer>
 
     <script>
-        // Obsługa menu mobilnego
         const hamburger = document.querySelector('#menu-toggle');
         const menu = document.querySelector('.menu');
 
@@ -130,82 +119,66 @@
             hamburger.setAttribute('aria-expanded', String(otwarte));
         });
 
-        // Elementy DOM
         const listaParkow = document.querySelector("#listaParkow");
         const kartaPodMapa = document.querySelector("#kartaPodMapa");
         const naglowekMapy = document.querySelector("#naglowekMapy");
         const mapaFrame = document.querySelector("#google-map-frame");
-        const kartyWszystkichPszok = document.querySelector("#kartyWszystkichPszok");
         const btnGore = document.querySelector("#przewinGore");
         const btnDol = document.querySelector("#przewinDol");
 
-        // Dane zapasowe na wypadek otwarcia offline z dysku (file://)
         const daneZapasowePszok = [
-            {
-                "id": 1,
-                "nazwa": "PSZOK Łódź – Bałuty (ul. Kasprowicza 10)",
-                "dzielnica": "Łódź-Bałuty (Żabieniec)",
-                "adres": "ul. Jana Kasprowicza 10, 91-212 Łódź",
-                "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
-                "przyjmuje": "elektrośmieci, baterie, świetlówki, farby, odpady wielkogabarytowe, odpady budowlane, opony i tekstylia.",
-                "lat": 51.8016,
-                "lon": 19.3995,
-                "mapQuery": "PSZOK+ul.+Jana+Kasprowicza+10+Łódź"
-            },
-            {
-                "id": 2,
-                "nazwa": "PSZOK Łódź – Górna (ul. Graniczna 2)",
-                "dzielnica": "Łódź-Górna (Chojny)",
-                "adres": "ul. Graniczna 2, 93-428 Łódź",
-                "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
-                "przyjmuje": "zużyty sprzęt RTV/AGD, baterie, chemikalia, meble, odpady budowlane, opony i odpady zielone.",
-                "lat": 51.7161,
-                "lon": 19.4398,
-                "mapQuery": "PSZOK+ul.+Graniczna+2+Łódź"
-            },
-            {
-                "id": 3,
-                "nazwa": "PSZOK Łódź – Dąbrowa (ul. Zamiejska 1)",
-                "dzielnica": "Łódź-Górna (Dąbrowa)",
-                "adres": "ul. Zamiejska 1, 93-379 Łódź",
-                "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
-                "przyjmuje": "sprzęt elektryczny i elektroniczny, meble, odpady wielkogabarytowe, gruz budowlany, opony i baterie.",
-                "lat": 51.7258,
-                "lon": 19.4939,
-                "mapQuery": "PSZOK+ul.+Zamiejska+1+Łódź"
-            },
-            {
-                "id": 4,
-                "nazwa": "PSZOK Łódź – Polesie (ul. Związkowa 2a)",
-                "dzielnica": "Łódź-Polesie (Karolew / Retkinia)",
-                "adres": "ul. Związkowa 2a, 94-127 Łódź",
-                "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
-                "przyjmuje": "baterie i akumulatory, świetlówki, przeterminowane leki, elektroodpady, meble, opony i gruz.",
-                "lat": 51.7513,
-                "lon": 19.3976,
-                "mapQuery": "PSZOK+ul.+Związkowa+2a+Łódź"
-            },
-            {
-                "id": 5,
-                "nazwa": "PSZOK Łódź – Teofilów (ul. Wersalska 47/75)",
-                "dzielnica": "Łódź-Bałuty (Teofilów Przemysłowy)",
-                "adres": "ul. Wersalska 47/75, 91-203 Łódź",
-                "godziny": "Pon–Pt: 7:00–19:30, Sob: 7:00–14:30",
-                "przyjmuje": "odpady problemowe z gospodarstw domowych, elektrośmieci, odpady wielkogabarytowe, gruz i opony.",
-                "lat": 51.7972,
-                "lon": 19.3879,
-                "mapQuery": "ul.+Wersalska+47/75+Łódź"
-            }
-        ];
+  {
+    "id": 1,
+    "nazwa": "PSZOK Łódź – Bałuty (ul. Kasprowicza 10)",
+    "dzielnica": "Łódź-Bałuty (Żabieniec)",
+    "adres": "ul. Jana Kasprowicza 10, 91-212 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "elektrośmieci, baterie, świetlówki, farby, odpady wielkogabarytowe, odpady budowlane, opony i tekstylia.",
+    "lat": 51.8016,
+    "lon": 19.3995,
+    "mapQuery": "ul.+Jana+Kasprowicza+10,+91-212+Łódź"
+  },
+  {
+    "id": 2,
+    "nazwa": "PSZOK Łódź – Górna (ul. Graniczna 2)",
+    "dzielnica": "Łódź-Górna (Chojny)",
+    "adres": "ul. Graniczna 2, 93-428 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "zużyty sprzęt RTV/AGD, baterie, chemikalia, meble, odpady budowlane, opony i odpady zielone.",
+    "lat": 51.7161,
+    "lon": 19.4398,
+    "mapQuery": "ul.+Graniczna+2,+93-428+Łódź"
+  },
+  {
+    "id": 3,
+    "nazwa": "PSZOK Łódź – Dąbrowa (ul. Zamiejska 1)",
+    "dzielnica": "Łódź-Górna (Dąbrowa)",
+    "adres": "ul. Zamiejska 1, 93-379 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "sprzęt elektryczny i elektroniczny, meble, odpady wielkogabarytowe, gruz budowlany, opony i baterie.",
+    "lat": 51.7258,
+    "lon": 19.4939,
+    "mapQuery": "ul.+Zamiejska+1,+93-379+Łódź"
+  },
+  {
+    "id": 4,
+    "nazwa": "PSZOK Łódź – Teofilów (ul. Wersalska 47/75)",
+    "dzielnica": "Łódź-Bałuty (Teofilów Przemysłowy)",
+    "adres": "ul. Wersalska 47/75, 91-203 Łódź",
+    "godziny": "Pon–Pt: 7:00–19:30, Sob: 7:00–14:30",
+    "przyjmuje": "odpady problemowe z gospodarstw domowych, elektrośmieci, odpady wielkogabarytowe, gruz i opony.",
+    "lat": 51.7972,
+    "lon": 19.3879,
+    "mapQuery": "ul.+Wersalska+47/75,+91-203+Łódź"
+  }
+];
 
         let listaPunktow = [];
         let aktualnyIndeks = 0;
 
-        // Funkcja zaznaczająca punkt o podanym indeksie, aktualizująca mapę i wsuwająca kartę pod mapę
         function wybierzPunktPoIndeksie(indeks, czyPrzewinacDoKarty = false) {
             if (!listaPunktow.length) return;
 
-            // Zapętlenie indeksu przy przewijaniu góra/dół
             if (indeks < 0) indeks = listaPunktow.length - 1;
             if (indeks >= listaPunktow.length) indeks = 0;
 
@@ -224,19 +197,14 @@
                 }
             });
 
-            // 2. Podświetlenie aktywnej karty w dolnym podglądzie
-            document.querySelectorAll(".karta-pszok-item").forEach((karta, idx) => {
-                karta.classList.toggle("aktywna-karta-pszok", idx === aktualnyIndeks);
-            });
-
-            // 3. Aktualizacja mapy Google
+            // 2. Aktualizacja mapy Google
             const zapytanie = park.mapQuery || encodeURIComponent(park.adres);
             mapaFrame.src = `https://www.google.com/maps?q=${zapytanie}&output=embed`;
             naglowekMapy.textContent = `🗺️ Mapa: ${park.nazwa}`;
 
-            // 4. Animowane podjechanie szczegółowych danych bezpośrednio pod mapę
+            // 3. Animowane podjechanie szczegółowych danych bezpośrednio pod mapę
             kartaPodMapa.classList.remove("animuj-podjazd");
-            void kartaPodMapa.offsetWidth; // restart animacji CSS
+            void kartaPodMapa.offsetWidth;
             kartaPodMapa.classList.add("animuj-podjazd");
 
             const linkNawigacja = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(park.adres)}`;
@@ -276,7 +244,6 @@
             }
         }
 
-        // Przyciski "Przewiń na górę" i "Przewiń na dół" przesuwają zielone zaznaczenie na kolejny/poprzedni PSZOK
         btnDol.addEventListener("click", () => {
             wybierzPunktPoIndeksie(aktualnyIndeks + 1, true);
         });
@@ -288,10 +255,8 @@
         function zbudujWidokPszok(parki) {
             listaPunktow = parki;
             listaParkow.innerHTML = "";
-            kartyWszystkichPszok.innerHTML = "";
 
             parki.forEach((park, idx) => {
-                // Element listy #listaParkow
                 const li = document.createElement("li");
                 li.textContent = park.nazwa;
                 li.style.cursor = "pointer";
@@ -299,32 +264,11 @@
                     wybierzPunktPoIndeksie(idx, true);
                 });
                 listaParkow.appendChild(li);
-
-                // Karta w dolnym przeglądzie wszystkich punktów
-                const karta = document.createElement("section");
-                karta.className = "kolumna karta-pszok-item";
-                karta.id = `pszok-${park.id}`;
-                karta.innerHTML = `
-                    <h2>📍 ${park.nazwa}</h2>
-                    <p><strong>🏠 Adres:</strong> ${park.adres}</p>
-                    <p><strong>🕒 Godziny otwarcia:</strong> ${park.godziny}</p>
-                    <p><strong>♻️ Przyjmowane odpady:</strong> ${park.przyjmuje}</p>
-                    <button class="btn-more pokaz-na-mapie-btn" type="button">
-                        🗺️ Pokaż na mapie
-                    </button>
-                `;
-                karta.querySelector(".pokaz-na-mapie-btn").addEventListener("click", () => {
-                    wybierzPunktPoIndeksie(idx, false);
-                    document.querySelector("#sekcja-mapy").scrollIntoView({ behavior: "smooth" });
-                });
-                kartyWszystkichPszok.appendChild(karta);
             });
 
-            // Domyślnie zaznacz pierwszy punkt na starcie
             wybierzPunktPoIndeksie(0, false);
         }
 
-        // Wczytanie danych z pliku JSON (z fallbackiem dla trybu lokalnego file://)
         fetch("assets/data/pszok.json")
             .then(response => {
                 if (!response.ok) throw new Error("Błąd HTTP");
