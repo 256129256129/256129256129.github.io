@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "nazwa": "🧃 Karton po mleku lub soku (Tetra Pak)",
+    "kosz": "Żółty pojemnik (Metale i tworzywa sztuczne)",
+    "kategoria": "zolty",
+    "opis": "Opakowania wielomateriałowe składają się z papieru, folii i aluminium – zgnieć je przed wyrzuceniem do żółtego kosza."
+  },
+  {
+    "id": 2,
+    "nazwa": "🧾 Paragon ze sklepu",
+    "kosz": "Czarny pojemnik (Odpady zmieszane)",
+    "kategoria": "czarny",
+    "opis": "Papier termiczny nie nadaje się do recyklingu makulatury. Wyrzuć go do czarnego pojemnika na odpady zmieszane."
+  },
+  {
+    "id": 3,
+    "nazwa": "🍕 Pudełko po pizzy",
+    "kosz": "Czarny (Zmieszane) / Czysta góra: Niebieski (Papier)",
+    "kategoria": "czarny",
+    "opis": "Zatłuszczony spód wrzuć do odpadów zmieszanych. Czystą górną pokrywkę możesz oderwać i wrzucić do papieru."
+  },
+  {
+    "id": 4,
+    "nazwa": "🍽️ Potłuczona szklanka, kieliszek lub talerz",
+    "kosz": "Czarny pojemnik (Odpady zmieszane)",
+    "kategoria": "czarny",
+    "opis": "Szkło stołowe, żaroodporne i ceramika mają inną temperaturę topnienia niż słoiki i butelki opakowaniowe."
+  },
+  {
+    "id": 5,
+    "nazwa": "🫙 Słoik po dżemie lub butelka szklana",
+    "kosz": "Zielony pojemnik (Szkło)",
+    "kategoria": "zielony",
+    "opis": "Opróżnij z zawartości i odkręć nakrętkę (metalową nakrętkę wrzuć do żółtego kosza). Słoików nie trzeba myć."
+  },
+  {
+    "id": 6,
+    "nazwa": "🧴 Butelka plastikowa PET po napoju",
+    "kosz": "Żółty pojemnik (Metale i tworzywa sztuczne)",
+    "kategoria": "zolty",
+    "opis": "Odkręć nakrętkę i zgnieć butelkę przed wyrzuceniem, aby zmniejszyć jej objętość."
+  },
+  {
+    "id": 7,
+    "nazwa": "🥫 Puszka aluminiowa lub stalowa po konserwie",
+    "kosz": "Żółty pojemnik (Metale i tworzywa sztuczne)",
+    "kategoria": "zolty",
+    "opis": "Opróżnij puszkę z resztek jedzenia i zgnieć przed wrzuceniem do żółtego pojemnika."
+  },
+  {
+    "id": 8,
+    "nazwa": "📰 Gazety, czasopisma, zeszyty, kartony",
+    "kosz": "Niebieski pojemnik (Papier)",
+    "kategoria": "niebieski",
+    "opis": "Usuń taśmę klejącą i foliowe elementy, a kartony złóż na płasko przed wrzuceniem."
+  },
+  {
+    "id": 9,
+    "nazwa": "🍎 Obierki z warzyw i owoców, fusy po kawie",
+    "kosz": "Brązowy pojemnik (Bioodpady)",
+    "kategoria": "brazowy",
+    "opis": "Wrzucaj luzem lub w workach biodegradowalnych – nigdy w zwykłych reklamówkach foliowych."
+  },
+  {
+    "id": 10,
+    "nazwa": "🍖 Kości zwierzęce, resztki mięsa, olej jadalny",
+    "kosz": "Czarny pojemnik (Odpady zmieszane)",
+    "kategoria": "czarny",
+    "opis": "Resztki pochodzenia zwierzęcego oraz tłuszcze nie mogą trafiać do brązowego pojemnika BIO."
+  },
+  {
+    "id": 11,
+    "nazwa": "🔋 Zużyte baterie, akumulatorki i świetlówki",
+    "kosz": "PSZOK lub pojemnik w sklepie / markecie",
+    "kategoria": "pszok",
+    "opis": "Zawierają metale ciężkie (m.in. ołów, kadm, rtęć). Oddaj do oznakowanego pojemnika w sklepie lub punktu PSZOK."
+  },
+  {
+    "id": 12,
+    "nazwa": "💊 Przeterminowane leki i termometry",
+    "kosz": "Specjalny pojemnik w aptece lub PSZOK",
+    "kategoria": "pszok",
+    "opis": "Kartonik i ulotkę wrzuć do papieru, a blistry z tabletkami lub syropy oddaj do pojemnika w aptece."
+  },
+  {
+    "id": 13,
+    "nazwa": "🔌 Stary telefon, ładowarka, drobna elektronika",
+    "kosz": "PSZOK Łódź lub punkt zbiórki elektroodpadów",
+    "kategoria": "pszok",
+    "opis": "Zużyty sprzęt elektroniczny przekaż do punktu PSZOK lub oddaj w markecie elektronicznym."
+  },
+  {
+    "id": 14,
+    "nazwa": "🛋️ Stare meble, materace, opony, gruz",
+    "kosz": "Punkt Selektywnej Zbiórki Odpadów (PSZOK)",
+    "kategoria": "pszok",
+    "opis": "Odpady wielkogabarytowe i poremontowe mieszkańcy Łodzi mogą bezpłatnie dostarczyć do dowolnego punktu PSZOK."
+  }
+]

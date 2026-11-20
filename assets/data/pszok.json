@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "nazwa": "PSZOK Łódź – Bałuty (ul. Kasprowicza 10)",
+    "dzielnica": "Łódź-Bałuty (Żabieniec)",
+    "adres": "ul. Jana Kasprowicza 10, 91-212 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "elektrośmieci, baterie, świetlówki, farby, odpady wielkogabarytowe, odpady budowlane, opony i tekstylia.",
+    "lat": 51.8016,
+    "lon": 19.3995,
+    "mapQuery": "PSZOK+ul.+Jana+Kasprowicza+10+Łódź"
+  },
+  {
+    "id": 2,
+    "nazwa": "PSZOK Łódź – Górna (ul. Graniczna 2)",
+    "dzielnica": "Łódź-Górna (Chojny)",
+    "adres": "ul. Graniczna 2, 93-428 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "zużyty sprzęt RTV/AGD, baterie, chemikalia, meble, odpady budowlane, opony i odpady zielone.",
+    "lat": 51.7161,
+    "lon": 19.4398,
+    "mapQuery": "PSZOK+ul.+Graniczna+2+Łódź"
+  },
+  {
+    "id": 3,
+    "nazwa": "PSZOK Łódź – Dąbrowa (ul. Zamiejska 1)",
+    "dzielnica": "Łódź-Górna (Dąbrowa)",
+    "adres": "ul. Zamiejska 1, 93-379 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "sprzęt elektryczny i elektroniczny, meble, odpady wielkogabarytowe, gruz budowlany, opony i baterie.",
+    "lat": 51.7258,
+    "lon": 19.4939,
+    "mapQuery": "PSZOK+ul.+Zamiejska+1+Łódź"
+  },
+  {
+    "id": 4,
+    "nazwa": "PSZOK Łódź – Polesie (ul. Związkowa 2a)",
+    "dzielnica": "Łódź-Polesie (Karolew / Retkinia)",
+    "adres": "ul. Związkowa 2a, 94-127 Łódź",
+    "godziny": "Pon–Pt: 8:00–20:00, Sob: 8:00–16:00",
+    "przyjmuje": "baterie i akumulatory, świetlówki, przeterminowane leki, elektroodpady, meble, opony i gruz.",
+    "lat": 51.7513,
+    "lon": 19.3976,
+    "mapQuery": "PSZOK+ul.+Związkowa+2a+Łódź"
+  },
+  {
+    "id": 5,
+    "nazwa": "PSZOK Łódź – Teofilów (ul. Wersalska 47/75)",
+    "dzielnica": "Łódź-Bałuty (Teofilów Przemysłowy)",
+    "adres": "ul. Wersalska 47/75, 91-203 Łódź",
+    "godziny": "Pon–Pt: 7:00–19:30, Sob: 7:00–14:30",
+    "przyjmuje": "odpady problemowe z gospodarstw domowych, elektrośmieci, odpady wielkogabarytowe, gruz i opony.",
+    "lat": 51.7972,
+    "lon": 19.3879,
+    "mapQuery": "ul.+Wersalska+47/75+Łódź"
+  }
+]
